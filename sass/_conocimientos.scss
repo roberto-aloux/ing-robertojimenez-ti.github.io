@@ -1,0 +1,186 @@
+.conocimientos {
+    width: 100%;
+    height: 100vh;
+    padding: 0 4rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    .slider {
+        width: 100%;
+        border-radius: 20px;
+        background: $blanco;
+        box-shadow: $sombraLight;
+        overflow: hidden;
+        body.dark & {
+            background: $negroclaro;
+            box-shadow: $sombraDark;
+        }
+        h2 {
+            padding: 1rem 0.5rem;
+            color: $azul;
+            body.dark & {
+                color: $grisClaro;
+            }
+        }
+        p {
+            padding: 0 0.5rem;
+            color: $azulClaro;
+            body.dark & {
+                color: $blanco;
+            }
+        }
+        .owl-carousel {
+            .owl-item {
+                .item {
+                    width: 100%;
+                    overflow: hidden;
+                    -webkit-transition: all 500ms;
+                    -moz-transition: all 500ms;
+                    -ms-transition: all 500ms;
+                    -o-transition: all 500ms;
+                    transition: all 500ms;
+                    padding: 1rem;
+                    filter: grayscale(100%);
+                    -webkit-filter: grayscale(100%);
+                    -moz-filter: grayscale(100%);
+                    img {
+                        width: 150px;
+                        height: 150px;
+                        display: block;
+                        margin: 0 auto;
+                        -webkit-transition: all 500ms;
+                        -moz-transition: all 500ms;
+                        -ms-transition: all 500ms;
+                        -o-transition: all 500ms;
+                        transition: all 500ms;
+                    }
+                    .description {
+                        padding: 1rem;
+                        text-align: center;
+                        display: none;
+                        -webkit-transition: all 500ms;
+                        -moz-transition: all 500ms;
+                        -ms-transition: all 500ms;
+                        -o-transition: all 500ms;
+                        transition: all 500ms;
+                        h3 {
+                            color: $azul;
+                            font-weight: 600;
+                            body.dark & {
+                                color: $grisClaro;
+                            }
+                        }
+                        p {
+                            color: $azulClaro;
+                            min-height: 100px;
+                            height: 100%;
+                            padding: 0 1rem;
+                            body.dark & {
+                                color: $blanco;
+                            }
+                        }
+                    }
+                }
+            }
+            .owl-item.big div {
+                filter: grayscale(0%);
+                -webkit-filter: grayscale(0%);
+                -moz-filter: grayscale(0%);
+                -webkit-transition: all 500ms;
+                -moz-transition: all 500ms;
+                -ms-transition: all 500ms;
+                -o-transition: all 500ms;
+                transition: all 500ms;
+                transform: scale(1.1);
+                .description {
+                    display: block;
+                    -webkit-transition: all 500ms;
+                    -moz-transition: all 500ms;
+                    -ms-transition: all 500ms;
+                    -o-transition: all 500ms;
+                    transition: all 500ms;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .conocimientos {
+        height: 100%;
+        padding: 4rem;
+        .slider {
+            padding: 2rem 0rem;
+            p {
+                padding: 1rem;
+                span {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .conocimientos {
+        height: 100%;
+        padding: 1rem;
+        .slider {
+            p {
+                font-size: 14px;
+                padding: 0 0.5rem;
+            }
+            .owl-carousel {
+                .owl-item {
+                    .item {
+                        width: 100%;
+                        overflow: hidden;
+                        -webkit-transition: all 500ms;
+                        -moz-transition: all 500ms;
+                        -ms-transition: all 500ms;
+                        -o-transition: all 500ms;
+                        transition: all 500ms;
+                        padding: 1rem 0rem;
+                        filter: grayscale(100%);
+                        -webkit-filter: grayscale(100%);
+                        -moz-filter: grayscale(100%);
+                        img {
+                            width: 150px;
+                            height: 150px;
+                            display: block;
+                            margin: 0 auto;
+                            -webkit-transition: all 500ms;
+                            -moz-transition: all 500ms;
+                            -ms-transition: all 500ms;
+                            -o-transition: all 500ms;
+                            transition: all 500ms;
+                        }
+                        .description {
+                            padding: 1rem 0;
+                            text-align: center;
+                            display: none;
+                            -webkit-transition: all 500ms;
+                            -moz-transition: all 500ms;
+                            -ms-transition: all 500ms;
+                            -o-transition: all 500ms;
+                            transition: all 500ms;
+                            h3 {
+                                color: $azul;
+                                font-weight: 600;
+                            }
+                            p {
+                                color: $azulClaro;
+                                min-height: 75px;
+                                height: 100%;
+                                padding: 0 1rem;
+                            }
+                        }
+                    }
+                }
+                .owl-item.big div {
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}

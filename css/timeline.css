@@ -1,0 +1,165 @@
+/*-----------------------TIMELINE-------------------------*/
+
+.timeline {
+    position: relative;
+    margin: 5px auto;
+    padding: 20px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: #00A2FF;
+}
+
+.timeline ul {
+    padding: 0;
+    margin: 0;
+}
+
+.timeline ul li {
+    list-style: none;
+    position: relative;
+    width: 50%;
+    padding: 10px 20px 20px 20px;
+    box-sizing: border-box;
+}
+
+.timeline ul li:nth-child(odd) {
+    float: left;
+    text-align: right;
+    clear: both;
+}
+
+.timeline ul li:nth-child(even) {
+    float: right;
+    text-align: left;
+    clear: both;
+}
+
+.timeline ul li:nth-child(odd):before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 30px;
+    right: -7px;
+    background: #00A2FF;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.199);
+}
+
+.timeline ul li:nth-child(even):before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 30px;
+    left: -5px;
+    background: #00A2FF;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.199);
+}
+
+.timeline ul li h3 {
+    padding: 0;
+    padding: 0;
+    color: #00A2FF;
+    font-size: 32px;
+    font-weight: 600;
+    text-align: justify;
+}
+
+.timeline ul li img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.timeline ul li p {
+    margin: 0;
+    text-align: justify;
+    font-size: 22px;
+}
+
+.dark .timeline ul li p {
+    color: #fff;
+}
+
+.timeline ul li .time h4 {
+    margin: 0;
+    padding: 0;
+    font-size: 42px;
+    color: #00A2FF;
+}
+
+.timeline ul li:nth-child(odd) .time {
+    position: absolute;
+    top: 5px;
+    right: -235px;
+}
+
+.timeline ul li:nth-child(even) .time {
+    position: absolute;
+    top: 5px;
+    left: -235px;
+}
+
+@media(max-width:767px) {
+    .timeline {
+        width: 100%;
+        padding-bottom: 0;
+    }
+    .timeline:before {
+        left: 0px;
+        height: 100%;
+    }
+    .timeline ul li {
+        width: 100%;
+    }
+    .timeline ul li h3 {
+        padding: 0;
+        padding: 0;
+        color: #00A2FF;
+        font-size: 24px;
+        font-weight: 600;
+        text-align: left;
+    }
+    .timeline ul li img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+    .timeline ul li p {
+        margin: 0;
+        text-align: justify;
+        font-size: 18px;
+    }
+    .timeline ul li .time h4 {
+        margin: 0;
+        padding: 0;
+        font-size: 25px;
+        color: #00A2FF;
+    }
+    .timeline ul li:nth-child(odd),
+    .timeline ul li:nth-child(even) {
+        width: 100%;
+        padding: 2rem 1rem;
+    }
+    .timeline ul li:nth-child(odd):before,
+    .timeline ul li:nth-child(even):before {
+        top: 0px;
+        left: -5px;
+    }
+    .timeline ul li:nth-child(odd) .time,
+    .timeline ul li:nth-child(even) .time {
+        top: -15px;
+        left: 1rem;
+        right: inherit;
+    }
+}

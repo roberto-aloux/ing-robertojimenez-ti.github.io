@@ -1,0 +1,530 @@
+.nav-bar {
+    width: 100%;
+    height: 50px;
+    //
+    position: fixed;
+    top: 0;
+    margin: 0;
+    padding: 0 3rem;
+    box-sizing: border-box;
+    //
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+    //
+    -webkit-transition: all 500ms;
+    -moz-transition: all 500ms;
+    -ms-transition: all 500ms;
+    -o-transition: all 500ms;
+    transition: all 500ms;
+    .btn-menu {
+        //
+        display: none;
+        padding: 0;
+        margin: 0;
+        //
+        z-index: 1001;
+        cursor: pointer;
+        .nav-icon {
+            width: 60px;
+            height: 60px;
+            position: relative;
+            z-index: 2;
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg) scale(0.4);
+            -webkit-transition: 0.5s ease-in-out;
+            -moz-transition: 0.5s ease-in-out;
+            -o-transition: 0.5s ease-in-out;
+            transition: 0.5s ease-in-out;
+            cursor: pointer;
+            span {
+                display: block;
+                position: absolute;
+                height: 9px;
+                width: 100%;
+                background: $azulClaro;
+                body.dark & {
+                    background: $blanco;
+                }
+                border-radius: 9px;
+                opacity: 1;
+                left: 0;
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+                -webkit-transition: 0.25s ease-in-out;
+                -moz-transition: 0.25s ease-in-out;
+                -o-transition: 0.25s ease-in-out;
+                transition: 0.25s ease-in-out;
+                &:nth-child(1) {
+                    top: 0px;
+                    -webkit-transform-origin: left center;
+                    -moz-transform-origin: left center;
+                    -o-transform-origin: left center;
+                    transform-origin: left center;
+                }
+                &:nth-child(2) {
+                    top: 22px;
+                    -webkit-transform-origin: left center;
+                    -moz-transform-origin: left center;
+                    -o-transform-origin: left center;
+                    transform-origin: left center;
+                }
+                &:nth-child(3) {
+                    top: 44px;
+                    -webkit-transform-origin: left center;
+                    -moz-transform-origin: left center;
+                    -o-transform-origin: left center;
+                    transform-origin: left center;
+                }
+            }
+        }
+    }
+    .btn-menu-close {
+        .nav-icon {
+            span {
+                &:nth-child(1) {
+                    -webkit-transform: rotate(45deg);
+                    -moz-transform: rotate(45deg);
+                    -o-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                    top: -3px;
+                    left: 8px;
+                    background: $azulClaro;
+                    body.dark & {
+                        background: $blanco;
+                    }
+                }
+                &:nth-child(2) {
+                    width: 0%;
+                    opacity: 0;
+                    background: $azulClaro;
+                    body.dark & {
+                        background: $blanco;
+                    }
+                }
+                &:nth-child(3) {
+                    -webkit-transform: rotate(-45deg);
+                    -moz-transform: rotate(-45deg);
+                    -o-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+                    top: 39px;
+                    left: 8px;
+                    background: $azulClaro;
+                    body.dark & {
+                        background: $blanco;
+                    }
+                }
+            }
+        }
+    }
+    .logotipo {
+        padding: 0;
+        .img-light {
+            width: 250px;
+            height: 100%;
+            display: none;
+            -webkit-transition: all 0.3s ease-in-out 0s;
+            -o-transition: all 0.3s ease-in-out 0s;
+            transition: all 0.3s ease-in-out 0s;
+        }
+        .img-dark {
+            width: 250px;
+            height: 100%;
+            display: initial;
+            -webkit-transition: all 0.3s ease-in-out 0s;
+            -o-transition: all 0.3s ease-in-out 0s;
+            transition: all 0.3s ease-in-out 0s;
+        }
+        body.dark & {
+            .img-light {
+                display: initial;
+                -webkit-transition: all 0.3s ease-in-out 0s;
+                -o-transition: all 0.3s ease-in-out 0s;
+                transition: all 0.3s ease-in-out 0s;
+            }
+            .img-dark {
+                display: none;
+                -webkit-transition: all 0.3s ease-in-out 0s;
+                -o-transition: all 0.3s ease-in-out 0s;
+                transition: all 0.3s ease-in-out 0s;
+            }
+        }
+    }
+    .nav {
+        width: 100%;
+        height: 100%;
+        //
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        //
+        z-index: 1000;
+        li {
+            height: 100%;
+            a {
+                height: 100%;
+                line-height: 2.5;
+                position: relative;
+                z-index: 1001;
+                //
+                font-size: 18px;
+                font-weight: 500;
+                letter-spacing: 3px;
+                color: $negroclaro;
+                //
+                -webkit-transition: 0.5s all ease-out;
+                -moz-transition: 0.5s all ease-out;
+                transition: 0.5s all ease-out;
+                body.dark & {
+                    color: $blanco;
+                    //
+                    -webkit-transition: 0.5s all ease-out;
+                    -moz-transition: 0.5s all ease-out;
+                    transition: 0.5s all ease-out;
+                }
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 3px;
+                    bottom: 0px;
+                    left: 0;
+                    //
+                    background: $azulClaro;
+                    visibility: hidden;
+                    transform: scaleX(0);
+                    -webkit-transition: all 0.3s ease-in-out 0s;
+                    -o-transition: all 0.3s ease-in-out 0s;
+                    transition: all 0.3s ease-in-out 0s;
+                    z-index: -1;
+                }
+                &:hover {
+                    &::before {
+                        visibility: visible;
+                        background: $azulClaro;
+                        -webkit-transform: scaleX(1);
+                        -ms-transform: scaleX(1);
+                        transform: scaleX(1);
+                    }
+                }
+            }
+            &.active {
+                a {
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 4px;
+                        bottom: 0px;
+                        left: 0;
+                        background: $azulClaro;
+                        visibility: visible;
+                        -webkit-transform: scaleX(1);
+                        -ms-transform: scaleX(1);
+                        transform: scaleX(1);
+                        -webkit-transition: all 0.3s ease-in-out 0s;
+                        -o-transition: all 0.3s ease-in-out 0s;
+                        transition: all 0.3s ease-in-out 0s;
+                        z-index: -1;
+                    }
+                }
+            }
+        }
+    }
+    .mode {
+        z-index: 2;
+    }
+}
+
+.navbar-scroll {
+    background: $blanco;
+    box-shadow: $sombraLight;
+    body.dark & {
+        background: $negro;
+        box-shadow: $sombraDark;
+        -moz-transition: all 500ms;
+        -ms-transition: all 500ms;
+        -o-transition: all 500ms;
+        transition: all 500ms;
+    }
+}
+
+@media screen and (max-width: 1090px) {
+    .nav-bar {
+        .logotipo {
+            .img-light {
+                width: 210px;
+            }
+            .img-dark {
+                width: 210px;
+            }
+        }
+        .nav {
+            li {
+                a {
+                    font-size: 18px;
+                    font-weight: 500;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+        .mode {
+            z-index: 2;
+        }
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .nav-bar {
+        width: 100%;
+        height: 60px;
+        padding: 0 1rem;
+        //
+        -webkit-transition: all 500ms;
+        -moz-transition: all 500ms;
+        -ms-transition: all 500ms;
+        -o-transition: all 500ms;
+        transition: all 500ms;
+        .btn-menu {
+            display: initial;
+        }
+        .logotipo {
+            padding: 0;
+            z-index: 1001;
+            .img-light {
+                width: 200px;
+                display: none;
+                -webkit-transition: all 0.3s ease-in-out 0s;
+                -o-transition: all 0.3s ease-in-out 0s;
+                transition: all 0.3s ease-in-out 0s;
+            }
+            .img-dark {
+                width: 200px;
+                display: initial;
+                -webkit-transition: all 0.3s ease-in-out 0s;
+                -o-transition: all 0.3s ease-in-out 0s;
+                transition: all 0.3s ease-in-out 0s;
+            }
+        }
+        .nav {
+            transform: translateX(-110%);
+            position: fixed;
+            backface-visibility: hidden;
+            display: block;
+            justify-content: initial;
+            background: $blanco;
+            box-shadow: $sombraLight;
+            //
+            width: 60%;
+            height: 92%;
+            border-radius: 8px;
+            //
+            left: 0;
+            top: 60px;
+            //
+            -webkit-transition: all 500ms;
+            -moz-transition: all 500ms;
+            -ms-transition: all 500ms;
+            -o-transition: all 500ms;
+            transition: all 500ms;
+            body.dark & {
+                background: $negro;
+            }
+            li {
+                width: 100%;
+                height: auto;
+                a {
+                    width: 100%;
+                    height: 100%;
+                    padding-left: 1rem;
+                    line-height: 3.5;
+                    position: relative;
+                    z-index: 1001;
+                    //
+                    font-size: 18px;
+                    font-weight: 500;
+                    letter-spacing: 3px;
+                    color: $negroclaro;
+                    //
+                    -webkit-transition: 0.5s all ease-out;
+                    -moz-transition: 0.5s all ease-out;
+                    transition: 0.5s all ease-out;
+                    body.dark & {
+                        color: $blanco;
+                    }
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 3px;
+                        bottom: 0px;
+                        left: 0;
+                        //
+                        background: $blanco;
+                        visibility: hidden;
+                        transform: scaleX(0);
+                        -webkit-transition: all 0.3s ease-in-out 0s;
+                        -o-transition: all 0.3s ease-in-out 0s;
+                        transition: all 0.3s ease-in-out 0s;
+                        z-index: -1;
+                        body.dark & {
+                            color: $blanco;
+                        }
+                    }
+                    &:hover {
+                        &::before {
+                            visibility: visible;
+                            background: $blanco;
+                            -webkit-transform: scaleX(1);
+                            -ms-transform: scaleX(1);
+                            transform: scaleX(1);
+                        }
+                    }
+                }
+                &.active {
+                    a {
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            width: 100%;
+                            height: 4px;
+                            bottom: 0px;
+                            left: 0;
+                            background: $azulClaro;
+                            visibility: visible;
+                            -webkit-transform: scaleX(1);
+                            -ms-transform: scaleX(1);
+                            transform: scaleX(1);
+                            -webkit-transition: all 0.3s ease-in-out 0s;
+                            -o-transition: all 0.3s ease-in-out 0s;
+                            transition: all 0.3s ease-in-out 0s;
+                            z-index: -1;
+                        }
+                        &:hover {
+                            color: $negroclaro;
+                            -webkit-transition: all 0.3s ease-in-out 0s;
+                            -o-transition: all 0.3s ease-in-out 0s;
+                            transition: all 0.3s ease-in-out 0s;
+                            body.dark & {
+                                color: $blanco;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .mode {
+            z-index: 1001;
+            padding: 0;
+        }
+    }
+    .toggle-menu {
+        -webkit-transition: all 500ms;
+        -moz-transition: all 500ms;
+        -ms-transition: all 500ms;
+        -o-transition: all 500ms;
+        transition: all 500ms;
+        transform: translateX(0%) !important;
+    }
+    .navbar-scroll {
+        .logotipo {
+            .img-light {
+                display: none;
+            }
+            .img-dark {
+                display: initial;
+            }
+            body.dark & {
+                .img-light {
+                    display: initial;
+                }
+                .img-dark {
+                    display: none;
+                }
+            }
+        }
+        .nav {
+            li {
+                a {
+                    color: $negroclaro;
+                    body.dark & {
+                        color: $blanco;
+                    }
+                    &:hover {
+                        &::before {
+                            background: $azulClaro;
+                            body.dark & {
+                                background: $blanco;
+                            }
+                        }
+                    }
+                }
+                &.active {
+                    a {
+                        &:hover {
+                            color: $negroclaro;
+                            body.dark & {
+                                color: $blanco;
+                            }
+                            &::before {
+                                background: $azulClaro;
+                                body.dark & {
+                                    background: $blanco;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#loader {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background: $grisClaro;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 500ms ease-out, visibility 0s linear 500ms;
+    -o-transition: opacity 500ms ease-out, visibility 0s linear 500ms;
+    transition: opacity 500ms ease-out, visibility 0s linear 500ms;
+    z-index: 1020;
+    body.dark & {
+        background: $negroclaro;
+    }
+}
+
+#loader.fullscreen {
+    background: $grisClaro;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: none;
+    -webkit-transform: none;
+    -ms-transform: none;
+    body.dark & {
+        background: $negroclaro;
+    }
+}
+
+#loader.show {
+    -webkit-transition: opacity 500ms ease-out, visibility 0s linear 0s;
+    -o-transition: opacity 500ms ease-out, visibility 0s linear 0s;
+    transition: opacity 500ms ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+#loader .loading-animation .logo {
+    display: block;
+    margin: 0 auto;
+    width: 50px;
+}

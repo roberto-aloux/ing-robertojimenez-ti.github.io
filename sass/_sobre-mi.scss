@@ -1,0 +1,87 @@
+#sobre-mi {
+    padding: 3rem 4rem;
+    .perfil {
+        background: $grisClaro;
+        color: $azul;
+        box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+        border-radius: 20px;
+        padding: 2rem 1rem;
+        margin-top: 2rem;
+        body.dark & {
+            background: $negroclaro;
+            color: $blanco;
+        }
+        .img-perfil {
+            width: 250px;
+            border-radius: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+        .text {
+            padding: 1rem;
+            font-size: 28px;
+            line-height: 2.5;
+            font-weight: 400;
+            text-align: justify;
+            span {
+                font-weight: 600;
+                b {
+                    font-weight: 700;
+                    i {
+                        font-size: 18px;
+                        padding: 0 0.5rem;
+                        transform: translateY(-0.5rem);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    #sobre-mi {
+        padding: 4rem 1rem 0rem 1rem;
+        .perfil {
+            background: #ffff;
+            box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+            color: $azul;
+            border-radius: 20px;
+            padding: 3rem 0.5rem;
+            .img-perfil {
+                width: 200px;
+                border-radius: 100%;
+                display: block;
+                margin: 0 auto;
+            }
+            .text {
+                padding: 1rem;
+                font-size: 22px;
+                line-height: 2.5;
+                font-weight: 400;
+                text-align: justify;
+                span {
+                    font-weight: 600;
+                    b {
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    #sobre-mi {
+        padding: 2rem 1rem;
+        .perfil {
+            padding: 0.5rem 1rem;
+            .img-perfil {
+                width: 100px;
+            }
+            .text {
+                padding: 0;
+                font-size: 18px;
+            }
+        }
+    }
+}

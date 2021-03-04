@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: "Poppins", sans-serif;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    background: $blanco;
+    transition: all 500ms cubic-bezier(1, 0, 0, 1);
+    &.dark {
+        body::-webkit-scrollbar {
+            background: $negro;
+        }
+    }
+}
+
+body::-webkit-scrollbar-thumb {
+    background: $azul;
+    height: 125px;
+    border-radius: 5px;
+    -moz-transition: all 500ms;
+    -ms-transition: all 500ms;
+    -o-transition: all 500ms;
+    transition: all 500ms;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: $azulClaro;
+    -moz-transition: all 500ms;
+    -ms-transition: all 500ms;
+    -o-transition: all 500ms;
+    transition: all 500ms;
+}
+
+body {
+    background: $grisClaro;
+    transition: 0.3s ease all;
+    &.dark {
+        background: $negro;
+    }
+}
+
+button,
+a {
+    background: none;
+    border: 0;
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    /* for button */
+    -webkit-appearance: button;
+    /* for input */
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+*:focus {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)!important;
+    outline: none!important;
+    outline-style: none!important;
+    outline-color: transparent!important;
+    box-shadow: none!important;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.center-img {
+    display: block;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none !important;
+}
+
+a {
+    text-decoration: none !important;
+    text-decoration-line: none !important;
+    text-decoration-color: #fff;
+}
+
+a:link,
+a:visited,
+a:active {
+    text-decoration: none !important;
+    text-decoration-line: none !important;
+}

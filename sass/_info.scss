@@ -1,0 +1,192 @@
+.info {
+    padding: 4rem;
+    color: $azul;
+    body.dark & {
+        color: $blanco;
+    }
+    .main-data {
+        .info-personal {
+            background: $blanco;
+            border-radius: 20px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            body.dark & {
+                background: $negroclaro;
+            }
+            h2 {
+                font-size: 32px;
+                font-weight: 700;
+            }
+            h3 {
+                font-size: 24px;
+                font-weight: 700;
+            }
+            ul {
+                li {
+                    display: flex;
+                    justify-content: space-between;
+                    line-height: 2;
+                    padding: 0 1rem;
+                    font-size: 20px;
+                    font-weight: 500;
+                    h6 {
+                        font-size: 20px;
+                        font-weight: 500;
+                    }
+                    span {
+                        font-size: 20px;
+                        font-weight: 200;
+                    }
+                }
+            }
+        }
+        .actitudes {
+            background: $blanco;
+            color: $azul;
+            border-radius: 20px;
+            padding: 1rem;
+            margin: 1rem 0;
+            body.dark & {
+                background: $negroclaro;
+                color: $blanco;
+            }
+            h3 {
+                font-size: 24px;
+                font-weight: 700;
+            }
+            ul {
+                li {
+                    line-height: 2;
+                    padding: 0 1rem;
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+            }
+        }
+        .aptitudes {
+            background: $blanco;
+            color: $azul;
+            border-radius: 20px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            body.dark & {
+                background: $negroclaro;
+                color: $blanco;
+            }
+            h3 {
+                font-size: 24px;
+                font-weight: 700;
+            }
+            ul {
+                li {
+                    line-height: 2;
+                    padding: 0 1rem;
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    .second-data {
+        .idiomas {
+            background: $blanco;
+            border-radius: 20px;
+            padding: 1rem;
+            body.dark & {
+                background: $negroclaro;
+            }
+            h3 {
+                font-size: 24px;
+                font-weight: 700;
+            }
+            .circular-bar {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                width: 100%;
+                gap: 20px;
+                .bar {
+                    .pie {
+                        body.dark & {
+                            background: $blanco;
+                            border-radius: 100%;
+                        }
+                        width: 100px !important;
+                        height: 100px !important;
+                        svg {
+                            width: 100% !important;
+                            height: 100% !important;
+                        }
+                    }
+                    p {
+                        text-align: center;
+                        margin-top: 0.25rem;
+                    }
+                }
+            }
+        }
+        .intereses {
+            background: $blanco;
+            border-radius: 20px;
+            padding: 1rem;
+            margin-top: 2rem;
+            body.dark & {
+                background: $negroclaro;
+            }
+            h3 {
+                font-size: 24px;
+                font-weight: 700;
+            }
+            li {
+                padding-left: 1rem;
+                h6 {
+                    font-size: 20px;
+                    font-weight: 500;
+                    margin-bottom: 4px;
+                }
+                p {
+                    padding-left: 0.5rem;
+                    font-size: 18px;
+                    font-weight: 200;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .info {
+        padding: 2rem;
+        .main-data {
+            .info-personal {
+                ul {
+                    li {
+                        width: 100%;
+                        display: initial;
+                        justify-content: initial;
+                        padding: 0;
+                        line-height: 1.5;
+                        font-size: 20px;
+                        h6 {
+                            width: 100%;
+                            font-size: 22px;
+                            margin-bottom: 0;
+                            padding: 0.25rem 0;
+                        }
+                        span {
+                            height: 100%;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .info {
+        padding: 4rem 1rem;
+    }
+}

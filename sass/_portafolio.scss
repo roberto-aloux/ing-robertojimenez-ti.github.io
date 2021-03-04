@@ -1,0 +1,152 @@
+#portafolio {
+    width: 100%;
+    height: 100%;
+    padding: 4rem;
+    .title {
+        color: $negroclaro;
+        text-align: center;
+        font-weight: 600;
+        body.dark & {
+            color: $blanco;
+        }
+    }
+    .content_card {
+        padding: 1rem;
+        .card {
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 500ms;
+            background: $blanco;
+            body.dark & {
+                background: $negroclaro;
+            }
+            .card_img {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                transition: all 500ms;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    transition: all 500ms;
+                }
+            }
+            .card_text {
+                position: absolute;
+                background: $blanco;
+                width: 101%;
+                height: 101%;
+                top: 0;
+                left: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 500ms;
+                padding: 1rem;
+                opacity: 0;
+                body.dark & {
+                    background: $negroclaro;
+                }
+                h3 {
+                    text-align: center;
+                    color: $negro;
+                    font-size: 20px;
+                    font-weight: 700;
+                    body.dark & {
+                        color: $blanco;
+                    }
+                }
+                p {
+                    font-size: 18px;
+                    color: $negroclaro;
+                    font-weight: 500;
+                    text-align: justify;
+                    transition: all 500ms;
+                    line-height: 1.5;
+                    body.dark & {
+                        color: $blanco;
+                    }
+                    i {
+                        transform: translateY(-0.25rem);
+                        padding-right: 0.5rem;
+                        font-size: 15px;
+                    }
+                }
+            }
+            &:hover {
+                transform: scale(1.05);
+                transition: all 500ms;
+                .card_text {
+                    transition: all 500ms;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:640px) {
+    #portafolio {
+        width: 100%;
+        height: 100%;
+        padding: 4rem 1rem;
+        .content_card {
+            padding: 1rem;
+            .card {
+                width: 100%;
+                height: 100%;
+                border-radius: 20px;
+                transition: all 500ms;
+                .card_img {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    transition: all 500ms;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        transition: all 500ms;
+                    }
+                }
+                .card_text {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: all 500ms;
+                    padding: .5rem;
+                    opacity: 1;
+                    h3 {
+                        text-align: center;
+                        color: $negro;
+                        font-size: 18px;
+                        font-weight: 700;
+                    }
+                    p {
+                        font-size: 16px;
+                        color: $negroclaro;
+                        font-weight: 500;
+                        text-align: justify;
+                        transition: all 500ms;
+                        line-height: 1.5;
+                        i {
+                            transform: translateY(-0.25rem);
+                            padding-right: 0.5rem;
+                            font-size: 15px;
+                        }
+                    }
+                }
+                &:hover {
+                    transform: scale(1.05);
+                    transition: all 500ms;
+                }
+            }
+        }
+    }
+}
