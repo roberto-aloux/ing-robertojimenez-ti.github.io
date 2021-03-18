@@ -1,89 +1,129 @@
 .banner {
     width: 100%;
     height: 100%;
-    background: $grisClaro url("../img/banner.svg") center center no-repeat;
+    background: $backgroundWhite url("../img/banner.svg") center center no-repeat;
     background-size: cover;
     -webkit-transition: all 500ms;
     -moz-transition: all 500ms;
     -ms-transition: all 500ms;
     -o-transition: all 500ms;
-    transition: background all 500ms;
+    transition: all 500ms cubic-bezier(1, 0, 0, 1);
     display: flex;
     align-items: center;
-    padding-top: 50px;
     body.dark & {
-        background: $negro url("../img/bannerdark.svg") center center no-repeat;
+        background: $backgroundDark url("../img/bannerdark.svg") center center no-repeat;
         background-size: cover;
         -webkit-transition: all 500ms;
         -moz-transition: all 500ms;
         -ms-transition: all 500ms;
         -o-transition: all 500ms;
-        transition: background all 500ms;
+        transition: all 500ms cubic-bezier(1, 0, 0, 1);
     }
     .banner-content {
         width: 100%;
         height: 100%;
-        text-align: center;
+        position: relative;
+        margin-top: 80px;
         .text {
-            padding: 3rem;
-            h1 {
-                font-size: 48px;
-                font-weight: 600;
-                letter-spacing: 3px;
-                color: $azulClaro;
-            }
-            .typing {
-                padding-top: 1.5rem;
-                width: 100%;
-                font-size: 36px;
-                font-weight: 600;
-                color: $amarillo;
-                #changeling {
-                    color: $negroclaro;
-                    body.dark & {
-                        color: $blanco;
+            padding-top: 3rem;
+            margin: 0 auto;
+            text-align: center;
+            .text-content {
+                h1 {
+                    font-size: 48px;
+                    font-weight: 600;
+                    letter-spacing: 3px;
+                    color: $primaryBlue;
+                }
+                .typing {
+                    padding: 0.5rem 0;
+                    width: 100%;
+                    font-size: 32px;
+                    font-weight: 500;
+                    color: $amarillo;
+                    #changeling {
+                        color: $textSilver;
+                        body.dark & {
+                            color: $textWhite;
+                        }
                     }
                 }
-            }
-            .btn-scroll {
-                margin-top: 1rem;
-                font-size: 20px;
-                font-weight: 600;
-                letter-spacing: 1px;
-                padding: 7.5px 20px;
-                border-radius: 50px;
-                background: $naranja;
-                border: 2px solid $naranja;
-                color: $blanco;
-                -webkit-transition: all 500ms;
-                -moz-transition: all 500ms;
-                -ms-transition: all 500ms;
-                -o-transition: all 500ms;
-                transition: all 500ms;
-                &:hover {
-                    background: transparent;
-                    color: $naranja;
-                    -webkit-transition: all 500ms;
-                    -moz-transition: all 500ms;
-                    -ms-transition: all 500ms;
-                    -o-transition: all 500ms;
-                    transition: all 500ms;
+                .btn-group {
+                    margin: 1rem auto;
+                    max-width: 500px;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    .btn-scroll,
+                    .btn-cv {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 20px;
+                        font-weight: 500;
+                        letter-spacing: 1px;
+                        padding: 7.5px 20px;
+                        border-radius: 50px;
+                        background: $orange;
+                        border: 2px solid $orange;
+                        color: $blanco;
+                        -webkit-transition: all 500ms;
+                        -moz-transition: all 500ms;
+                        -ms-transition: all 500ms;
+                        -o-transition: all 500ms;
+                        transition: all 500ms;
+                        &:hover {
+                            background: transparent;
+                            color: $orange;
+                            -webkit-transition: all 500ms;
+                            -moz-transition: all 500ms;
+                            -ms-transition: all 500ms;
+                            -o-transition: all 500ms;
+                            transition: all 500ms;
+                        }
+                    }
                 }
             }
         }
         .img-banner {
-            padding: 0 3.5rem;
-            z-index: 0;
-            width: 100%;
-            display: block;
-            margin: 0 auto;
+            padding: 2rem 0;
+            img {
+                max-width: 750px;
+                width: 100%;
+                display: block;
+                margin: 0 auto;
+            }
         }
-        .img-banner-mobible {
-            padding: 0 3.5rem;
-            z-index: 0;
-            width: 100%;
-            display: none;
-            margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 1190px) {
+    .banner {
+        .banner-content {
+            .text {
+                width: 65%;
+                .text-content {
+                    h1 {
+                        font-size: 42px;
+                    }
+                    .typing {
+                        font-size: 28px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .banner {
+        .banner-content {
+            .text {
+                width: 100%;
+                height: initial;
+                float: none;
+            }
         }
     }
 }
@@ -91,18 +131,17 @@
 @media screen and (max-width: 768px) {
     .banner {
         .banner-content {
+            margin-top: 60px;
             .text {
-                padding: 5rem 1rem;
-                h1 {
-                    font-size: 48px;
-                }
-                .typing {
-                    margin: 2rem 0;
-                    font-size: 28px;
-                }
-                .btn-scroll {
-                    margin: 2rem 0;
-                    font-size: 20px;
+                padding: 10rem 1rem;
+                .text-content {
+                    h1 {
+                        font-size: 48px;
+                    }
+                    .typing {
+                        margin: 2rem 0;
+                        font-size: 28px;
+                    }
                 }
             }
         }
@@ -113,27 +152,50 @@
     .banner {
         .banner-content {
             .text {
-                padding: 7rem 0.5rem 2rem 0.5rem;
-                h1 {
-                    font-size: 32px;
-                }
-                .typing {
-                    height: 75px;
-                    margin: 1rem 0;
-                    font-size: 22px;
-                }
-                .btn-scroll {
-                    margin: 1rem 0;
-                    font-size: 20px;
+                padding: 1rem;
+                .text-content {
+                    h1 {
+                        font-size: 32px;
+                    }
+                    .typing {
+                        height: 100px;
+                        margin: 1rem 0;
+                        font-size: 22px;
+                    }
                 }
             }
-            .img-banner {
-                display: none;
-                padding: 0.5rem;
-            }
-            .img-banner-mobible {
-                display: block;
-                padding: 0.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .banner {
+        .banner-content {
+            .text {
+                padding: 1rem;
+                .text-content {
+                    h1 {
+                        font-size: 32px;
+                    }
+                    .typing {
+                        height: 100px;
+                        margin: 1rem 0;
+                        font-size: 22px;
+                    }
+                    .btn-group {
+                        margin: 0;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        .btn-scroll,
+                        .btn-cv {
+                            font-size: 18px;
+                            font-weight: 600;
+                            letter-spacing: 0px;
+                            padding: 7.5px 10px;
+                        }
+                    }
+                }
             }
         }
     }
@@ -143,27 +205,25 @@
     .banner {
         .banner-content {
             .text {
-                padding: 8rem 1rem;
-                h1 {
-                    font-size: 28px;
+                padding: 1rem;
+                .text-content {
+                    h1 {
+                        font-size: 28px;
+                    }
+                    .typing {
+                        height: 75px;
+                        font-size: 20px;
+                    }
+                    .btn-group {
+                        .btn-scroll,
+                        .btn-cv {
+                            font-size: 16px;
+                            font-weight: 500;
+                            letter-spacing: 0px;
+                            padding: 5px 7.5px;
+                        }
+                    }
                 }
-                .typing {
-                    height: 100px;
-                    margin: 1rem 0;
-                    font-size: 20px;
-                }
-                .btn-scroll {
-                    margin: 2rem 0;
-                    font-size: 20px;
-                }
-            }
-            .img-banner {
-                display: none;
-                padding: 0.5rem;
-            }
-            .img-banner-mobible {
-                display: none;
-                padding: 0.5rem;
             }
         }
     }

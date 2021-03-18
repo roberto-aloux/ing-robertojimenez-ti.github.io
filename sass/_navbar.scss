@@ -1,6 +1,6 @@
 .nav-bar {
     width: 100%;
-    height: 50px;
+    height: 80px;
     //
     position: fixed;
     top: 0;
@@ -12,13 +12,13 @@
     justify-content: space-between;
     z-index: 1000;
     //
-    -webkit-transition: all 500ms;
-    -moz-transition: all 500ms;
-    -ms-transition: all 500ms;
-    -o-transition: all 500ms;
-    transition: all 500ms;
+    -webkit-transition: all 500ms ease-in-out 0s;
+    -o-transition: all 500ms ease-in-out 0s;
+    transition: all 500ms ease-in-out 0s;
     .btn-menu {
         //
+        width: 35px;
+        height: 100%;
         display: none;
         padding: 0;
         margin: 0;
@@ -26,9 +26,10 @@
         z-index: 1001;
         cursor: pointer;
         .nav-icon {
-            width: 60px;
-            height: 60px;
-            position: relative;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 1rem;
             z-index: 2;
             -webkit-transform: rotate(0deg);
             -moz-transform: rotate(0deg);
@@ -40,10 +41,12 @@
             transition: 0.5s ease-in-out;
             cursor: pointer;
             span {
+                padding: 0;
+                margin: 0;
                 display: block;
                 position: absolute;
                 height: 9px;
-                width: 100%;
+                width: 60px;
                 background: $azulClaro;
                 body.dark & {
                     background: $blanco;
@@ -122,7 +125,7 @@
         }
     }
     .logotipo {
-        padding: 0;
+        padding-right: 5rem;
         .img-light {
             width: 250px;
             height: 100%;
@@ -164,10 +167,10 @@
         //
         z-index: 1000;
         li {
-            height: 100%;
             a {
-                height: 100%;
-                line-height: 2.5;
+                display: flex;
+                align-items: center;
+                line-height: 3.4;
                 position: relative;
                 z-index: 1001;
                 //
@@ -241,20 +244,28 @@
 }
 
 .navbar-scroll {
-    background: $blanco;
-    box-shadow: $sombraLight;
+    height: 60px;
+    background: $backgroundWhite;
+    box-shadow: $sombraDark;
+    -webkit-transition: 400ms ease all;
+    -moz-transition: 400ms ease all;
+    -ms-transition: 400ms ease all;
+    -o-transition: 400ms ease all;
+    transition: 400ms ease all;
     body.dark & {
-        background: $negro;
+        background: $backgroundDark;
         box-shadow: $sombraDark;
-        -moz-transition: all 500ms;
-        -ms-transition: all 500ms;
-        -o-transition: all 500ms;
-        transition: all 500ms;
+        -webkit-transition: 400ms ease all;
+        -moz-transition: 400ms ease all;
+        -ms-transition: 400ms ease all;
+        -o-transition: 400ms ease all;
+        transition: 400ms ease all;
     }
 }
 
 @media screen and (max-width: 1090px) {
     .nav-bar {
+        padding: 0 2rem;
         .logotipo {
             .img-light {
                 width: 210px;
@@ -281,16 +292,14 @@
 @media screen and (max-width: 980px) {
     .nav-bar {
         width: 100%;
-        height: 60px;
+        height: 75px;
         padding: 0 1rem;
         //
-        -webkit-transition: all 500ms;
-        -moz-transition: all 500ms;
-        -ms-transition: all 500ms;
-        -o-transition: all 500ms;
-        transition: all 500ms;
+        -webkit-transition: all 500ms ease-in-out 0s;
+        -o-transition: all 500ms ease-in-out 0s;
+        transition: all 500ms ease-in-out 0s;
         .btn-menu {
-            display: initial;
+            display: block;
         }
         .logotipo {
             padding: 0;
@@ -431,6 +440,10 @@
         transform: translateX(0%) !important;
     }
     .navbar-scroll {
+        height: 60px;
+        -webkit-transition: all 500ms ease-in-out 0s;
+        -o-transition: all 500ms ease-in-out 0s;
+        transition: all 500ms ease-in-out 0s;
         .logotipo {
             .img-light {
                 display: none;
@@ -490,7 +503,7 @@
     align-items: center;
     align-content: center;
     justify-content: center;
-    background: $grisClaro;
+    background: $backgroundWhite;
     opacity: 0;
     visibility: hidden;
     -webkit-transition: opacity 500ms ease-out, visibility 0s linear 500ms;
@@ -498,12 +511,12 @@
     transition: opacity 500ms ease-out, visibility 0s linear 500ms;
     z-index: 1020;
     body.dark & {
-        background: $negroclaro;
+        background: $backgroundDark;
     }
 }
 
 #loader.fullscreen {
-    background: $grisClaro;
+    background: $backgroundWhite;
     top: 0;
     width: 100%;
     height: 100%;
@@ -511,7 +524,7 @@
     -webkit-transform: none;
     -ms-transform: none;
     body.dark & {
-        background: $negroclaro;
+        background: $backgroundDark;
     }
 }
 

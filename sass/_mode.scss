@@ -18,14 +18,12 @@
         right: unset;
         border-radius: unset;
         border-radius: 100px;
-        transition: 0.3s ease all;
+        transition: 200ms ease all;
     }
     &.active {
         background: $amarillo;
-        color: $negro;
         &::after {
-            right: 0;
-            left: unset;
+            transform: translateX(100%);
         }
     }
     span {

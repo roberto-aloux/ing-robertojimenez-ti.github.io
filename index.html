@@ -26,67 +26,75 @@
     </div>
     <header data-scroll-header>
         <nav class="nav-bar" id="navbar">
-            <button id="btn-menu" class="btn-menu center">
-            <div class="nav-icon">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </button>
+            <button id="btn-menu" class="btn-menu">
+                <div class="nav-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
             <div class="logotipo center">
-                <a href="#inicio">
+                <a href="/">
                     <img loading="lazy" class="img-light" src="img/logotipo.png">
                     <img loading="lazy" class="img-dark" src="img/logotipodark.png">
                 </a>
             </div>
             <ul class="nav" id="menu">
                 <li class="active"><a data-scroll href="#inicio">Inicio</a></li>
-                <li><a data-scroll href="#sobre-mi">Sobre mí</a></li>
-                <li><a data-scroll href="#curriculum">Curriculum</a></li>
+                <li><a data-scroll href="#sobre-mi">Sobre mi</a></li>
+                <li><a data-scroll href="#stack">Mi Stack</a></li>
                 <li><a data-scroll href="#portafolio">Portafolio</a></li>
                 <li><a data-scroll href="#contacto">Contacto</a></li>
 
             </ul>
             <div class="mode center">
                 <button class="switch" id="switch">
-                <span><i class="fas fa-sun"></i></span>
-                <span><i class="fas fa-moon"></i></span>
-            </button>
+                    <span><i class="fas fa-sun"></i></span>
+                    <span><i class="fas fa-moon"></i></span>
+                </button>
             </div>
         </nav>
 
     </header>
     <section class="banner" id="inicio">
-        <div class="banner-content animated fadeInUp" data-wow-delay="1000ms">
+        <div class="banner-content animated fadeInUp" data-wow-delay="500ms">
             <div class="text">
-                <h1>Roberto Aldo Jiménez Flores</h1>
-                <div class="typing">
-                    <span id="changeling"></span>
-                    <span id="cursor-blink">|</span>
+                <div class="text-content">
+                    <h1>Roberto Aldo Jiménez Flores</h1>
+                    <div class="typing">
+                        <span id="changeling"></span>
+                        <span id="cursor-blink">|</span>
+                    </div>
+                    <div class="btn-group">
+                        <a class="btn-scroll" data-scroll href="#sobre-mi">
+                            Conóceme
+                        </a>
+                        <a class="btn-cv" href="documentos/CVIngenieroTIRobertoAldoJiménezFlores2021.pdf" download="CV Ingeniero TI Roberto Aldo Jiménez Flores 2021">
+                            Descargar CV
+                        </a>
+                    </div>
                 </div>
-                <a class="btn-scroll" data-scroll href="#sobre-mi">
-                    Conóceme
-                </a>
             </div>
-            <img loading="lazy" class="img-banner" src="img/banner.png" alt="Banner Portafolio Ingeniero Roberto Aldo Jiménez Flores">
-            <img loading="lazy" class="img-banner-mobible" src="img/bannermobible.png" alt="Banner responsive Portafolio Ingeniero en Tecnológias de la Información Roberto Jiménez">
+            <div class="img-banner">
+                <img loading="lazy" src="img/banner.png" alt="Banner Portafolio Ingeniero Roberto Aldo Jiménez Flores">
+            </div>
         </div>
+
     </section>
     <section id="sobre-mi">
-        <div class="perfil center  wow animated fadeInUp">
-            <div class="row">
-                <div class="col-xl-3 center">
-                    <img loading="lazy" class="img-fluid img-perfil" src="img/perfil.jpg" alt="Ingeniero en Tecnológias de la Información Roberto Jiménez ">
-                </div>
-                <div class="col-xl-9 center">
-                    <p class="text">
-                        ¡Hola mundo!, mi nombre es <span>Roberto Aldo Jiménez Flores</span>, soy <span>Ingeniero en Tecnologías de la Información.</span> Me apasiona el mundo de la tecnología, el diseño y desarrollo de interfaces. <br> <span><b><i class="fas fa-quote-left"></i>Darle al usuario final, una grata experiencia al navegar por una página web ó una aplicación móvil.<i class="fas fa-quote-right"></i></b></span>
+        <div class="sobre-mi">
+            <div class="content">
+                <div>
+                    <h2>Hola, Soy <span>Roberto.👋</span></h2>
+                    <p>
+                        Tengo 23 años de edad y soy <span>Ingeniero en Tecnologías de la Información.</span> Me apasiona el <span>diseño</span> y el <span>desarrollo Front end</span>.
+                        <span> <i class="fas fa-quote-left"></i>Darle al usuario final, una grata experiencia al navegar por una página o aplicación
+                    web.<i class="fas fa-quote-right"></i>
+                    </span>
                     </p>
                 </div>
             </div>
         </div>
-    </section>
-    <section id="curriculum">
         <div class="info">
             <div class="row">
                 <div class="col-lg-8">
@@ -107,7 +115,7 @@
                                     <span> Ingeniero en Tecnologías de la Información</span>
                                 </li>
                                 <li>
-                                    <h6>Resindencia:</h6>
+                                    <h6>Residencia:</h6>
                                     <span>Tecamachalco Puebla</span>
                                 </li>
                                 <li>
@@ -166,13 +174,16 @@
                             <div class="circular-bar">
                                 <div class="bar">
                                     <div class="pie" data-pie='{ "percent": 100}'>
+                                        <div class="background-pie"></div>
                                     </div>
+
                                     <p>Español</p>
                                 </div>
                                 <div class="bar">
-                                    <div class="pie" data-pie='{ "percent": 60}'>
+                                    <div class="pie" data-pie='{ "percent": 70}'>
+                                        <div class="background-pie"></div>
                                     </div>
-                                    <p>Ingles A1</p>
+                                    <p>Ingles A2</p>
                                 </div>
                             </div>
                         </div>
@@ -181,7 +192,8 @@
                             <ul>
                                 <li>
                                     <h6>-Culto</h6>
-                                    <p>Series, películas y documentales tecnológicos, de superación, y de superhéroes.</p>
+                                    <p>Series, películas y documentales tecnológicos, de superación, y de superhéroes.
+                                    </p>
                                 </li>
                                 <li>
                                     <h6>-Lectura</h6>
@@ -207,18 +219,18 @@
         </div>
         <div class="formacion">
             <div class="timeline">
-                <div class="timeline__event  animated fadeInUp delay-3s timeline__event--type1 wow animated fadeInUp">
+                <div class="timeline__event  timeline__event--type1 wow animated fadeInUp">
                     <div class="timeline__event__icon ">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
                     <div class="timeline__event__date circle-date">
                         <div>
-                            <h2>Historial Academico</h2>
+                            <h2>Educación</h2>
                             <p>2013-2021</p>
                         </div>
                     </div>
                 </div>
-                <div class="timeline__event  animated fadeInUp delay-3s timeline__event--type1 wow animated fadeInUp">
+                <div class="timeline__event   timeline__event--type1 wow animated fadeInUp">
                     <div class="timeline__event__icon ">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
@@ -230,11 +242,12 @@
                             <img loading="lazy" class="img-fluid img-light" src="img/precb.png" alt="">
                         </div>
                         <div class="timeline__event__description">
-                            <p>Curso el nivel medio superior en la Preparatoria Regional Enrique Cabrera Barroso de la Benemérita Universidad Autónoma de Puebla.</p>
+                            <p>Curso el nivel medio superior en la Preparatoria Regional Enrique Cabrera Barroso de la Benemérita Universidad Autónoma de Puebla.
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div class="timeline__event animated fadeInUp delay-2s timeline__event--type2 wow animated fadeInUp">
+                <div class="timeline__event timeline__event--type2 wow animated fadeInUp">
                     <div class="timeline__event__icon">
                         <i class="fas fa-graduation-cap"></i>
 
@@ -251,7 +264,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="timeline__event animated fadeInUp delay-1s timeline__event--type3 wow animated fadeInUp">
+                <div class="timeline__event timeline__event--type3 wow animated fadeInUp">
                     <div class="timeline__event__icon">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
@@ -271,11 +284,13 @@
             </div>
 
         </div>
+    </section>
+    <section id="stack">
         <div class="conocimientos">
             <div class="slider">
                 <div>
-                    <h2>Conocimientos</h2>
-                    <p>Desliza <span>o presiona las teclas de izquierda o derecha</span> para ver todos los conocimientos (Támbien puedes esperar).</p>
+                    <h2>🚀Mi Stack</h2>
+                    <p>Desliza <span>o presiona las teclas de izquierda o derecha</span> para ver todas las tecnologías, herramientas y apps que uso. (También puedes esperar).</p>
                     <div class="loop owl-carousel owl-theme">
                         <div class="item">
                             <img loading="lazy" class="img-fluid" src="img/tecnologias/html5.png" alt="">
@@ -309,13 +324,13 @@
                             <img loading="lazy" class="img-fluid" src="img/tecnologias/sass.png" alt="">
                             <div class="description">
                                 <h3>Sass</h3>
-                                <p>Manejo del preprosesador de hojas de estilos Sass para un codigó CSS más limpio.</p>
+                                <p>Manejo del preprocesador de hojas de estilos Sass para un código CSS más limpio.</p>
                             </div>
                         </div>
                         <div class="item">
                             <img loading="lazy" class="img-fluid" src="img/tecnologias/php.png" alt="">
                             <div class="description">
-                                <h3>Php</h3>
+                                <h3>PHP</h3>
                                 <p>Conceptos y manejo del lenguaje de programación para desarrollo web.</p>
                             </div>
                         </div>
@@ -330,7 +345,7 @@
                             <img loading="lazy" class="img-fluid" src="img/tecnologias/photoshop.png" alt="">
                             <div class="description">
                                 <h3>Photoshop</h3>
-                                <p>Manejo de photoshop CS6, para la edición de imagenes.</p>
+                                <p>Manejo de photoshop CS6, para la edición de imágenes.</p>
                             </div>
                         </div>
                         <!--div class="item">
@@ -358,7 +373,7 @@
                             <img loading="lazy" class="img-fluid" src="img/tecnologias/project.png" alt="">
                             <div class="description">
                                 <h3>Microsoft Project</h3>
-                                <p>Manejo de Microsoft Project para la creación de cornogramas de actividades.</p>
+                                <p>Manejo de Microsoft Project para la creación de cronogramas de actividades.</p>
                             </div>
                         </div>
                     </div>
@@ -367,112 +382,82 @@
         </div>
     </section>
     <section id="portafolio">
-        <div class="wow animated fadeInUp">
-            <div class="title  wow animated fadeInUp">
-                <h2> Portafolio</h2>
-            </div>
-            <div class="row">
-                <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12 content_card">
-                    <div class="card  wow animated fadeInUp">
-                        <div class="card_img">
-                            <img class="img-fluid" loading="lazy" src="img/portafolio/hare28.jpg" alt="">
-                        </div>
-                        <div class="card_text">
-                            <div>
-                                <h3>Hare 28</h3>
-                                <p><i class="fas fa-quote-left"></i>Rediseño la página de la empresa Grupo Empresarial Hare28 como parte de mis prácticas profesionales, adecuándome a la identidad de la empresa.<i class="fas fa-quote-right"></i>. </p>
-                            </div>
-                        </div>
-
-                    </div>
+        <div class="proyectos">
+            <div class="my_card">
+                <div class="card_img">
+                    <img class="img-fluid" loading="lazy" src="img/portafolio/hare28.jpg" alt="" srcset="">
                 </div>
-                <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12 content_card">
-                    <div class="card  wow animated fadeInUp">
-                        <div class="card_img ">
-                            <img class="img-fluid" loading="lazy" src="img/portafolio/tradeglobalsystem.jpg" alt="">
-                        </div>
-                        <div class="card_text">
-                            <div>
-                                <h3>Trade Global System</h3>
-                                <p><i class="fas fa-quote-left"></i>Desarrollo del interface de usuario y participación en algunas funciones del sistema como parte de mis prácticas profesionales.<i class="fas fa-quote-right"></i></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12 content_card">
-                    <div class="card  wow animated fadeInUp">
-                        <div class="card_img">
-                            <img class="img-fluid" loading="lazy" src="img/portafolio/freedomday2019.jpg" alt="">
-                        </div>
-                        <div class="card_text">
-                            <div>
-                                <h3>Software Freedom Day 2019</h3>
-                                <p><i class="fas fa-quote-left"></i>Diseño web de la página del Software Freedom Day 2019 Uttecam, Creación de contenido para redes sociales (Banners, imágenes videos), creación de diseños para la Merch y organización del
-                                    evento. En la Universidad Tecnológica de Tecamachalco.<i class="fas fa-quote-right"></i></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12 content_card">
-                    <div class="card  wow animated fadeInUp">
-                        <div class="card_img">
-                            <img class="img-fluid" loading="lazy" src="img/portafolio/globalbiosave.jpg" alt="">
-                        </div>
-                        <div class="card_text">
-                            <div>
-                                <h3>Global Bio Save México</h3>
-                                <p><i class="fas fa-quote-left"></i>Diseño web de la página Global Bio Save México, como parte de mis prácticas profesionales.<i class="fas fa-quote-right"></i></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12 content_card">
-                    <div class="card  wow animated fadeInUp">
-                        <div class="card_img">
-                            <img class="img-fluid" loading="lazy" src="img/portafolio/freedomday2018.jpg" alt="">
-                        </div>
-                        <div class="card_text">
-                            <div>
-                                <h3>Software Freedom Day 2018</h3>
-                                <p><i class="fas fa-quote-left"></i>Organización y Diseño de la aplicación web para el Software Freedom Day 2018. En la universidad Tecnológica de Tecamachalco.<i class="fas fa-quote-right"></i></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12 content_card">
-                    <div class="card  wow animated fadeInUp">
-                        <div class="card_img">
-                            <img class="img-fluid" loading="lazy" src="img/portafolio/congreso-internacional-admon-2019.jpg" alt="">
-                        </div>
-                        <div class="card_text">
-                            <div>
-                                <h3>XVI Congreo Internacional de Administración 2019</h3>
-                                <p><i class="fas fa-quote-left"></i>Diseño de la aplicación web para el XVI Congreso Internacional de Administración 2019. En la Universidad Tecnológica de Tecamachalco.<i class="fas fa-quote-right"></i></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12 content_card">
-                    <div class="card  wow animated fadeInUp">
-                        <div class="card_img">
-                            <img class="img-fluid" loading="lazy" src="img/portafolio/ciencias-basicas.jpg" alt="">
-                        </div>
-                        <div class="card_text">
-                            <div>
-                                <h3>Concurso Ciencias Básicas</h3>
-                                <p><i class="fas fa-quote-left"></i>Desarrollo del juego Ciencias básicas, para el congreso Nacional Agroindustrial /Alimentario /Biotecnológico 2018. En la Universidad Tecnológica de Tecamachalco.<i class="fas fa-quote-right"></i></p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="card_text">
+                    <span>Landing page/ Catálogo de productos/ Diseño UI</span>
+                    <h2>Hare 28</h2>
+                    <p>Desarrollo Front end de la página Grupo Empresarial Hare28 y creación de correos personalizados como parte de prácticas profesionales en la empresa Grupo Empresarial Hare28.
+                    </p>
+                    <a href="" class="card_button">Conocer más</a>
                 </div>
             </div>
-        </div>
+            <div class="my_card">
+                <div class="card_img">
+                    <img class="img-fluid" loading="lazy" src="img/portafolio/globalbiosave.jpg" alt="" srcset="">
+                </div>
+                <div class="card_text">
+                    <span>Landing page / Catálogo de productos</span>
+                    <h2>Global Bio Save México</h2>
+                    <p>Desarrollo Front end de la página Global Bio Save México y creación de correos personalizados como parte de prácticas profesionales en la empresa Grupo Empresarial Hare28</p>
+                    <a href="" class="card_button">Conocer más</a>
+                </div>
+            </div>
+            <div class="my_card">
+                <div class="card_img">
+                    <img class="img-fluid" loading="lazy" src="img/portafolio/tradeglobalsystem.jpg" alt="" srcset="">
+                </div>
+                <div class="card_text">
+                    <span>Landing page /E-commerce Catálogo de productos</span>
+                    <h2>Trade Global System</h2>
+                    <p>Desarrollo y diseño Front end de la plataforma de comercio electrónico. Participación en la Implementación de métodos de pago, log-in y registro como parte de prácticas profesionales en la empresa Grupo Empresarial Hare28</p>
+                    <a href="" class="card_button">Conocer más</a>
+                </div>
+            </div>
+            <div class="my_card">
+                <div class="card_img">
+                    <img class="img-fluid" loading="lazy" src="img/portafolio/freedomday2019.jpg" alt="" srcset="">
+                </div>
+                <div class="card_text">
+                    <span>Landing page /página de registro</span>
+                    <h2>Software Freedom Day 2018/2019</h2>
+                    <p>Desarrollo Front End de la web app para el Software Freedom Day 2018 y 2019 Uttecam (Universidad Tecnológica de Tecamachalco). Creador de diseños event merch, banners, contenido para redes sociales y organizador del evento.
+                    </p>
+                    <a href="" class="card_button">Conocer más</a>
+                </div>
+            </div>
+            <div class="my_card">
+                <div class="card_img">
+                    <img class="img-fluid" loading="lazy" src="img/portafolio/congreso-internacional-admon-2019.jpg" alt="" srcset="">
+                </div>
+                <div class="card_text">
+                    <span>Landing page/ Página de registro </span>
+                    <h2>XVI Congreso Internacional de Administración 2019</h2>
+                    <p>Desarrollo Front End de la web app para el Software Freedom Day 2018 y 2019 Uttecam (Universidad Tecnológica de Tecamachalco). Creador de diseños event merch, banners, contenido para redes sociales y organizador del evento.
+                    </p>
+                    <a href="" class="card_button">Conocer más</a>
+                </div>
+            </div>
+            <div class="my_card">
+                <div class="card_img">
+                    <img class="img-fluid" loading="lazy" src="img/portafolio/ciencias-basicas.jpg" alt="" srcset="">
+                </div>
+                <div class="card_text">
+                    <span>Juego interactivo/ Diseño UI </span>
+                    <h2>Ciencias Básicas. XI Congreso Nacional Agroindustrial Alimentario Biotecnológico</h2>
+                    <p>Desarrollo del juego Ciencias básicas, para el congreso Nacional Agroindustrial/ Alimentario /Biotecnológico 2018. Programa educativo Agricultura de la Universidad Tecnológica de Tecamachalco.</p>
+                    <a href="" class="card_button">Conocer más</a>
+                </div>
+            </div>
         </div>
     </section>
     <section id="contacto">
         <div class="footer  wow animated fadeInUp">
+            <h2>let's go to w🚀rk togheter</h2>
             <div class="sec-1">
-                <h2>Contacto</h2>
                 <ul>
                     <li>
                         © Roberto Jiménez<i class="fas fa-angle-right"></i>
@@ -497,7 +482,8 @@
                             <a class="linkedin" href="https://www.linkedin.com/in/roberto-aldo-jim%C3%A9nez-flores-b46185157/" target="_blank" class="social-media-lnk"><i class="fab fa-linkedin-in"></i></a>
                         </li>
                         <li>
-                            <a class="phone" href="callto:+522492030932" target="_blank" class="social-media-lnk"><i class="fas fa-phone"></i></a>
+                            <a class="phone" href="callto:+522492030932" target="_blank" class="social-media-lnk"><i
+                                    class="fas fa-phone"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -510,21 +496,11 @@
 <script src="js/plugins/wow.min.js"></script>
 <script src="js/plugins/circularProgressBar.min.js"></script>
 <script src="js/main.js"></script>
-<script src="js/plugins/smototh-scroll.min.js"></script>
 <script src="js/typing.js"></script>
 <script src="js/plugins/owl.carousel.min.js"></script>
 
 <script>
     new WOW().init();
-</script>
-<script>
-    smoothScroll.init({
-        selector: '[data-scroll]', // Selector for links (must be a class, ID, data attribute, or element tag)
-        selectorHeader: '[data-scroll-header]', // Selector for fixed headers (must be a valid CSS selector) [optional]
-        speed: 1000, // Integer. How fast to complete the scroll in milliseconds
-        easing: 'easeInOutCubic', // Easing pattern to use
-        offset: 0, // Integer. How far to offset the scrolling anchor location in pixels
-    });
 </script>
 <script>
     var owl = $('.owl-carousel');
@@ -546,14 +522,11 @@
             0: {
                 items: 1
             },
-            768: {
+            720: {
                 items: 2
             },
             1280: {
                 items: 3
-            },
-            1366: {
-                items: 4
             }
         }
     })

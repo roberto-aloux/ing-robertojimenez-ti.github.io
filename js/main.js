@@ -54,19 +54,23 @@ $('#btn-menu').on('click', function() {
 });
 
 
-
 (function($, window, document) {
-
-    $('[data-toggle]').on('click', function(event) {
+    // Add smooth scrolling to links
+    $("[data-scroll]").on('click', function(event) {
+        // Prevent default anchor click behavior
         event.preventDefault();
-        var target = $(this.hash);
-        target.toggle();
+        // Store hash
+        var hash = this.hash;
+        // Using jQuery's animate() method to add page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top - 60
+        }, 800);
     });
-
     // Cache selectors
     var lastId,
         topMenu = $("#menu"),
-        topMenuHeight = topMenu.outerHeight() + 15,
+        topMenuHeight = topMenu.outerHeight(),
         // All list items
         menuItems = topMenu.find("a"),
         // Anchors corresponding to menu items

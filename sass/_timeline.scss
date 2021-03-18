@@ -1,23 +1,28 @@
 .formacion {
-    padding: 0rem;
+    background: $primaryWhite;
+    padding: 0rem 3rem;
     width: 100%;
+    body.dark & {
+        background: $primaryDark;
+    }
     .timeline-title {
         padding-bottom: 1rem;
         text-align: center;
-        font-size: 32px;
+        font-size: 42px;
         font-weight: 700;
         color: $azul;
     }
     .circle-date {
-        padding: 0 7rem!important;
-        border-radius: 20px!important;
+        width: 50%;
+        padding: 1rem !important;
+        border-radius: 16px!important;
         display: flex;
         align-items: center;
         justify-content: center;
         align-content: center;
         text-align: center;
         h2 {
-            font-size: 28px;
+            font-size: 42px;
             padding-top: 1rem;
         }
     }
@@ -29,17 +34,17 @@
         &__event {
             position: relative;
             display: flex;
-            border-radius: 20px;
+            border-radius: 16px;
             align-self: center;
-            width: 65vw;
-            padding: 2.5rem 0;
+            width: 100%;
+            padding: 3rem 0;
             &:nth-child(2n + 1) {
                 flex-direction: row-reverse;
                 .timeline__event__date {
-                    border-radius: 0 20px 20px 0;
+                    border-radius: 0 16px 16px 0;
                 }
                 .timeline__event__content {
-                    border-radius: 20px 0 0 20px;
+                    border-radius: 16px 0 0 16px;
                 }
                 .timeline__event__icon {
                     &:before {
@@ -57,13 +62,13 @@
                     &:after {
                         //estilos linea horizontal
                         content: "";
-                        width: 100%;
+                        width: calc(100% + 150px);
                         height: 3px;
                         background: $azulCeleste;
                         position: absolute;
                         z-index: -1;
                         top: 50%;
-                        left: -100%;
+                        left: calc(-100% - 150px);
                     }
                 }
             }
@@ -71,10 +76,10 @@
                 margin-bottom: 1rem;
             }
             &__content {
-                padding: 1rem 1rem 2rem 1rem;
+                padding: 2rem;
                 box-shadow: $sombraLight;
                 width: 100%;
-                border-radius: 0 20px 20px 0;
+                border-radius: 0 16px 16px 0;
                 background: $blanco;
                 body.dark & {
                     background: $negroclaro;
@@ -90,8 +95,8 @@
                 align-items: center;
                 justify-content: center;
                 white-space: nowrap;
-                padding: 0 25px;
-                border-radius: 20px 0 0 20px;
+                padding: 0 50px;
+                border-radius: 16px 0 0 16px;
             }
             &__icon {
                 //estilos para el icono
@@ -101,7 +106,7 @@
                 color: $blanco;
                 padding: 20px;
                 align-self: center;
-                margin: 0 20px;
+                margin: 0 150px;
                 background: $azul;
                 border-radius: 100%;
                 width: 40px;
@@ -125,7 +130,7 @@
                 }
                 &:after {
                     content: "";
-                    width: 100%;
+                    width: calc(100% + 150px);
                     height: 3px;
                     background: $azulCeleste;
                     position: absolute;
@@ -138,10 +143,10 @@
                 font-size: 20px;
                 line-height: 2;
                 text-align: justify;
-                color: $azul;
+                color: $textSilver;
                 font-weight: 500;
                 body.dark & {
-                    color: $azulCeleste;
+                    color: $textWhite;
                 }
             }
             &--type2 {
@@ -156,7 +161,7 @@
                     .timeline__event__icon {
                         &:before,
                         &:after {
-                            background: $naranja
+                            background: $orange;
                         }
                     }
                 }
@@ -165,13 +170,13 @@
                     color: $blanco;
                     &:before,
                     &:after {
-                        background: $naranja;
+                        background: $orange;
                     }
                 }
             }
             &--type3 {
                 &:after {
-                    background: $naranja;
+                    background: $orange;
                 }
                 .timeline__event__date {
                     color: $blanco;
@@ -181,7 +186,7 @@
                     .timeline__event__icon {
                         &:before,
                         &:after {
-                            background: $naranja;
+                            background: $orange;
                         }
                     }
                 }
@@ -190,7 +195,7 @@
                     color: $blanco;
                     &:before,
                     &:after {
-                        background: $naranja
+                        background: $orange;
                     }
                 }
             }
@@ -207,13 +212,11 @@
 
 @media (max-width: 980px) {
     .formacion {
-        padding: 3rem;
-        .timeline-title {
-            padding-bottom: 0rem;
-        }
+        padding: 2rem;
         .circle-date {
+            width: 100%;
             padding: 0 1rem!important;
-            border-radius: 0 0 20px 20px !important;
+            border-radius: 0 0 16px 16px !important;
         }
         .timeline {
             &__event {
@@ -248,7 +251,7 @@
                 &__content {
                     padding: 1rem;
                     width: 100%;
-                    border-radius: 0 0 20px 20px!important;
+                    border-radius: 0 0 16px 16px!important;
                 }
                 &__date {
                     //estilos para la fecha
@@ -262,7 +265,7 @@
                     margin: 0;
                     background: $azul;
                     box-shadow: none;
-                    border-radius: 20px 20px 0px 0;
+                    border-radius: 16px 20px 0px 0;
                     i {
                         font-size: 32px;
                     }
@@ -287,9 +290,7 @@
 @media (max-width: 640px) {
     .formacion {
         padding: 0;
-        .timeline-title {
-            padding-bottom: 0rem;
-        }
+        padding-bottom: 2rem;
         .timeline {
             &__event {
                 position: relative;
@@ -323,7 +324,7 @@
                 &__content {
                     padding: 1rem;
                     width: 100%;
-                    border-radius: 0 0 20px 20px!important;
+                    border-radius: 0 0 16px 16px!important;
                 }
                 &__date {
                     //estilos para la fecha
@@ -337,7 +338,7 @@
                     margin: 0;
                     background: $azul;
                     box-shadow: none;
-                    border-radius: 20px 20px 0px 0;
+                    border-radius: 16px 16px 0px 0;
                     i {
                         font-size: 32px;
                     }
@@ -350,29 +351,11 @@
                     }
                 }
                 &__description {
-                    font-size: 18px;
+                    font-size: 16px;
                     line-height: 2;
                     text-align: justify;
                 }
             }
         }
-    }
-}
-
-@keyframes fillLeft {
-    100% {
-        right: 100%;
-    }
-}
-
-@keyframes fillTop {
-    100% {
-        top: 100%;
-    }
-}
-
-@keyframes fillLeftOdd {
-    100% {
-        left: 100%;
     }
 }
