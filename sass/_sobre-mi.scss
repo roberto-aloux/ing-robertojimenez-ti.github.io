@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url("../img/front.png") center center no-repeat;
+    background: url("../img/background/front.png") center center no-repeat;
     background-size: cover;
     background-attachment: fixed;
     .content {
@@ -63,7 +63,7 @@
 
 @media screen and (max-width: 768px) {
     .sobre-mi {
-        background: url("../img/frontResponsive.png") center center no-repeat;
+        background: url("../img/background/frontResponsive.png") center center no-repeat;
         background-size: cover;
         background-attachment: fixed;
         .content {

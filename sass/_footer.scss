@@ -2,14 +2,19 @@
     width: 100%;
     height: 100%;
     min-height: 100vh;
-    background: $azul;
+    background: $backgroundBlue;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 3rem;
     .footer {
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 100%;
+        }
         h2 {
-            color: $blanco;
+            color: $backgroundWhite;
             font-size: 75px;
             text-align: center;
             font-weight: 600;
@@ -20,7 +25,7 @@
         .sec-1 {
             text-align: center;
             h2 {
-                color: $blanco;
+                color: $backgroundWhite;
             }
             ul {
                 list-style: none;
@@ -29,7 +34,7 @@
                 display: inline;
                 li {
                     display: inline-block;
-                    color: $blanco;
+                    color: $backgroundWhite;
                     font-size: 18px;
                     i {
                         padding: 0 0.25rem;
@@ -37,7 +42,7 @@
                     a {
                         display: flex;
                         align-items: center;
-                        color: $blanco;
+                        color: $backgroundWhite;
                         font-weight: 600;
                         overflow: hidden;
                         background: linear-gradient( to right, #00b6ff, #dc00fe 50%, $blanco 50%);
@@ -79,11 +84,11 @@
                             align-items: center;
                             justify-content: center;
                             box-shadow: 2px 3px 0 0 rgba(0, 0, 0, 0.2);
-                            border: 4px solid$blanco;
+                            border: 4px solid$backgroundWhite;
                             overflow: hidden;
-                            color: $blanco;
+                            color: $backgroundWhite;
                             text-decoration: none;
-                            color: $blanco;
+                            color: $backgroundWhite;
                         }
                         a.whatsapp {
                             &:hover {
@@ -124,7 +129,7 @@
             width: 100%;
             height: 100%;
             h2 {
-                color: $blanco;
+                color: $backgroundWhite;
                 font-size: 50px;
                 text-align: center;
                 font-weight: 600;
@@ -134,7 +139,7 @@
             .sec-1 {
                 text-align: center;
                 h2 {
-                    color: $blanco;
+                    color: $backgroundWhite;
                 }
                 ul {
                     list-style: none;
@@ -143,7 +148,7 @@
                     display: inline;
                     li {
                         display: inline-block;
-                        color: $blanco;
+                        color: $backgroundWhite;
                         font-size: 18px;
                         i {
                             padding: 0 0.25rem;
@@ -151,7 +156,7 @@
                         a {
                             display: flex;
                             align-items: center;
-                            color: $blanco;
+                            color: $backgroundWhite;
                             font-weight: 600;
                             overflow: hidden;
                             background: linear-gradient( to right, #00b6ff, #dc00fe 50%, $blanco 50%);
@@ -193,11 +198,11 @@
                                 align-items: center;
                                 justify-content: center;
                                 box-shadow: 2px 3px 0 0 rgba(0, 0, 0, 0.2);
-                                border: 4px solid$blanco;
+                                border: 4px solid$backgroundWhite;
                                 overflow: hidden;
-                                color: $blanco;
+                                color: $backgroundWhite;
                                 text-decoration: none;
-                                color: $blanco;
+                                color: $backgroundWhite;
                             }
                             a.whatsapp {
                                 &:hover {

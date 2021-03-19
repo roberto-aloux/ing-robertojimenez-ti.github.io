@@ -9,6 +9,7 @@
     box-sizing: border-box;
     //
     display: flex;
+    align-items: center;
     justify-content: space-between;
     z-index: 1000;
     //
@@ -125,37 +126,13 @@
         }
     }
     .logotipo {
-        padding-right: 5rem;
-        .img-light {
-            width: 250px;
-            height: 100%;
-            display: none;
-            -webkit-transition: all 0.3s ease-in-out 0s;
-            -o-transition: all 0.3s ease-in-out 0s;
-            transition: all 0.3s ease-in-out 0s;
-        }
-        .img-dark {
-            width: 250px;
-            height: 100%;
-            display: initial;
-            -webkit-transition: all 0.3s ease-in-out 0s;
-            -o-transition: all 0.3s ease-in-out 0s;
-            transition: all 0.3s ease-in-out 0s;
-        }
-        body.dark & {
-            .img-light {
-                display: initial;
-                -webkit-transition: all 0.3s ease-in-out 0s;
-                -o-transition: all 0.3s ease-in-out 0s;
-                transition: all 0.3s ease-in-out 0s;
-            }
-            .img-dark {
-                display: none;
-                -webkit-transition: all 0.3s ease-in-out 0s;
-                -o-transition: all 0.3s ease-in-out 0s;
-                transition: all 0.3s ease-in-out 0s;
-            }
-        }
+        width: 450px;
+        height: auto;
+        display: flex;
+        align-items: center;
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        -o-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
     }
     .nav {
         width: 100%;
@@ -267,12 +244,7 @@
     .nav-bar {
         padding: 0 2rem;
         .logotipo {
-            .img-light {
-                width: 210px;
-            }
-            .img-dark {
-                width: 210px;
-            }
+            width: 400px;
         }
         .nav {
             li {
@@ -304,20 +276,7 @@
         .logotipo {
             padding: 0;
             z-index: 1001;
-            .img-light {
-                width: 200px;
-                display: none;
-                -webkit-transition: all 0.3s ease-in-out 0s;
-                -o-transition: all 0.3s ease-in-out 0s;
-                transition: all 0.3s ease-in-out 0s;
-            }
-            .img-dark {
-                width: 200px;
-                display: initial;
-                -webkit-transition: all 0.3s ease-in-out 0s;
-                -o-transition: all 0.3s ease-in-out 0s;
-                transition: all 0.3s ease-in-out 0s;
-            }
+            width: 300px;
         }
         .nav {
             transform: translateX(-110%);
@@ -444,22 +403,6 @@
         -webkit-transition: all 500ms ease-in-out 0s;
         -o-transition: all 500ms ease-in-out 0s;
         transition: all 500ms ease-in-out 0s;
-        .logotipo {
-            .img-light {
-                display: none;
-            }
-            .img-dark {
-                display: initial;
-            }
-            body.dark & {
-                .img-light {
-                    display: initial;
-                }
-                .img-dark {
-                    display: none;
-                }
-            }
-        }
         .nav {
             li {
                 a {
@@ -493,6 +436,24 @@
                     }
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .nav-bar {
+        .logotipo {
+            padding: 0;
+            z-index: 1001;
+            width: 275px;
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .nav-bar {
+        .logotipo {
+            width: 225px;
         }
     }
 }

@@ -1,118 +1,70 @@
 #portafolio {
     width: 100%;
+    min-height: 100vh;
     height: 100%;
-    padding: 3rem;
+    padding: 0 3rem;
     display: flex;
     align-items: center;
-    justify-content: center;
     .proyectos {
-        max-width: 980px;
         width: 100%;
-        .my_card {
-            display: -webkit-box;
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
-            width: 100%;
-            border-radius: 16px;
-            overflow: hidden;
-            margin: 40px auto;
-            -webkit-flex-wrap: wrap;
-            -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-            background-color: $backgroundWhite;
-            box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1), 0 15px 35px 0 rgba(0, 0, 0, 0.05);
-            -webkit-transition: all 120ms ease;
-            transition: all 120ms ease;
-            body.dark & {
-                background: $backgroundDark;
-            }
-            .card_img {
-                width: 60%;
-                height: 450px;
+        height: 100%;
+        .content-card {
+            padding: 1rem;
+            .my-card {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                border-radius: 16px;
+                box-shadow: $sombraLight;
+                overflow: hidden;
                 img {
+                    transition: all 400ms;
+                }
+                .my-card-hover {
+                    visibility: none;
+                    opacity: 0;
                     width: 100%;
-                    height: auto;
-                }
-            }
-            @supports(object-fit: cover) {
-                .card_img img {
                     height: 100%;
-                    object-fit: cover;
-                    object-position: center center;
-                }
-            }
-            .card_text {
-                display: -webkit-box;
-                display: -webkit-flex;
-                display: -ms-flexbox;
-                display: flex;
-                padding: 1rem;
-                -webkit-box-orient: vertical;
-                -webkit-box-direction: normal;
-                -webkit-flex-direction: column;
-                -ms-flex-direction: column;
-                flex-direction: column;
-                -webkit-box-flex: 1;
-                -webkit-flex: 1;
-                -ms-flex: 1;
-                flex: 1;
-                span {
-                    color: rgba(100, 100, 100, 0.507);
-                    font-size: 12px;
-                    font-weight: 400;
-                    letter-spacing: 1px;
-                    text-transform: uppercase;
-                    body.dark & {
-                        color: $textWhite;
-                    }
-                }
-                h2 {
-                    padding: 1rem 0;
-                    color: $negro;
-                    font-weight: 600;
-                    font-size: 24px;
-                    letter-spacing: 2px;
-                    line-height: 1.25;
-                    text-align: left;
-                    body.dark & {
-                        color: $primaryWhite;
-                    }
-                }
-                p {
-                    color: $negroclaro;
-                    text-align: justify;
-                    font-weight: 500;
-                    line-height: 2;
-                    body.dark & {
-                        color: $primaryWhite;
-                    }
-                }
-                .card_button {
-                    display: none;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: #0d48a1a2;
+                    display: flex;
                     align-items: center;
                     justify-content: center;
-                    width: 200px;
-                    font-size: 16px;
-                    font-weight: 600;
-                    color: #fff;
-                    cursor: pointer;
-                    height: 50px;
-                    text-align: center;
-                    border: none;
-                    background-size: 300% 100%;
-                    border-radius: 50px;
-                    background-image: linear-gradient( to right, #21cc5c, #1eb452, #21cc5c, #1eb452);
-                    moz-transition: all 0.4s ease-in-out;
-                    -o-transition: all 0.4s ease-in-out;
-                    -webkit-transition: all 0.4s ease-in-out;
-                    transition: all 0.4s ease-in-out;
-                    &:hover {
-                        background-position: 100% 0;
-                        moz-transition: all 0.4s ease-in-out;
-                        -o-transition: all 0.4s ease-in-out;
-                        -webkit-transition: all 0.4s ease-in-out;
-                        transition: all 0.4s ease-in-out;
+                    transform: scale(1);
+                    transition: all 400ms;
+                    user-select: none;
+                    a {
+                        pointer-events: none;
+                        cursor: default;
+                        span {
+                            padding: 2rem;
+                            color: $textWhite;
+                            font-size: 24px;
+                            font-weight: 100px;
+                            transform: rotate(0deg);
+                            transition: 400ms;
+                        }
+                    }
+                }
+                &:hover {
+                    img {
+                        transform: scale(1.1);
+                        transition: all 400ms;
+                    }
+                    .my-card-hover {
+                        visibility: visible;
+                        opacity: 1;
+                        transition: all 400ms;
+                        a {
+                            pointer-events: all;
+                            cursor: pointer;
+                            span {
+                                transition: 400ms;
+                                transform: rotate(180deg);
+                            }
+                        }
                     }
                 }
             }
@@ -120,100 +72,8 @@
     }
 }
 
-@media screen and (max-width: 831px) {
+@media screen and (max-width: 720px) {
     #portafolio {
-        width: 100%;
-        height: 100%;
         padding: 1rem;
-        .proyectos {
-            .my_card {
-                display: -webkit-box;
-                display: -webkit-flex;
-                display: -ms-flexbox;
-                display: flex;
-                width: 100%;
-                margin: 40px auto;
-                -webkit-flex-wrap: wrap;
-                -ms-flex-wrap: wrap;
-                flex-wrap: wrap;
-                -webkit-box-align: stretch;
-                -webkit-align-items: stretch;
-                -ms-flex-align: stretch;
-                align-items: stretch;
-                border-radius: 16px;
-                background-color: #fff;
-                box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1), 0 15px 35px 0 rgba(0, 0, 0, 0.05);
-                -webkit-transition: all 120ms ease;
-                transition: all 120ms ease;
-                .card_img {
-                    width: 100%;
-                    height: 320px;
-                    border-top-right-radius: 8px;
-                    border-bottom-left-radius: 0px;
-                }
-                .card_img.hare28 {
-                    background-image: url('../img/portafolio/hare28.jpg');
-                }
-                .card_text {
-                    display: -webkit-box;
-                    display: -webkit-flex;
-                    display: -ms-flexbox;
-                    display: flex;
-                    -webkit-box-orient: vertical;
-                    -webkit-box-direction: normal;
-                    -webkit-flex-direction: column;
-                    -ms-flex-direction: column;
-                    flex-direction: column;
-                    -webkit-box-flex: 1;
-                    -webkit-flex: 1;
-                    -ms-flex: 1;
-                    flex: 1;
-                    span {
-                        color: rgba(51, 51, 51, 0.4);
-                        font-size: 12px;
-                        font-weight: 400;
-                        letter-spacing: 2px;
-                        text-transform: uppercase;
-                    }
-                    h2 {
-                        color: $negro;
-                        margin-top: 20px;
-                        margin-bottom: 10px;
-                        line-height: 36px;
-                        font-weight: bold;
-                        letter-spacing: 3px;
-                    }
-                    p {
-                        color: $negroclaro;
-                        text-align: justify;
-                        line-height: 2;
-                        font-weight: 500;
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 479px) {
-    #portafolio {
-        width: 100%;
-        height: 100%;
-        padding: 1rem;
-        .proyectos {
-            .my_card {
-                margin: 2rem 0;
-                .card_img {
-                    height: 180px;
-                }
-                .card_text {
-                    h2 {
-                        padding: 0;
-                        font-size: 20px;
-                        line-height: 1;
-                    }
-                }
-            }
-        }
     }
 }

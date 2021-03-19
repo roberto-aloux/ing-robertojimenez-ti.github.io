@@ -117,6 +117,9 @@ body.dark {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -222,33 +225,14 @@ body.dark .nav-bar .btn-menu-close .nav-icon span:nth-child(3) {
 }
 
 .nav-bar .logotipo {
-  padding-right: 5rem;
-}
-
-.nav-bar .logotipo .img-light {
-  width: 250px;
-  height: 100%;
-  display: none;
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
-}
-
-.nav-bar .logotipo .img-dark {
-  width: 250px;
-  height: 100%;
-  display: initial;
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
-}
-
-body.dark .nav-bar .logotipo .img-light {
-  display: initial;
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
-}
-
-body.dark .nav-bar .logotipo .img-dark {
-  display: none;
+  width: 450px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
 }
@@ -356,11 +340,8 @@ body.dark .navbar-scroll {
   .nav-bar {
     padding: 0 2rem;
   }
-  .nav-bar .logotipo .img-light {
-    width: 210px;
-  }
-  .nav-bar .logotipo .img-dark {
-    width: 210px;
+  .nav-bar .logotipo {
+    width: 400px;
   }
   .nav-bar .nav li a {
     font-size: 18px;
@@ -386,18 +367,7 @@ body.dark .navbar-scroll {
   .nav-bar .logotipo {
     padding: 0;
     z-index: 1001;
-  }
-  .nav-bar .logotipo .img-light {
-    width: 200px;
-    display: none;
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s;
-  }
-  .nav-bar .logotipo .img-dark {
-    width: 200px;
-    display: initial;
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s;
+    width: 300px;
   }
   .nav-bar .nav {
     -webkit-transform: translateX(-110%);
@@ -506,18 +476,6 @@ body.dark .navbar-scroll {
     -webkit-transition: all 500ms ease-in-out 0s;
     transition: all 500ms ease-in-out 0s;
   }
-  .navbar-scroll .logotipo .img-light {
-    display: none;
-  }
-  .navbar-scroll .logotipo .img-dark {
-    display: initial;
-  }
-  body.dark .navbar-scroll .logotipo .img-light {
-    display: initial;
-  }
-  body.dark .navbar-scroll .logotipo .img-dark {
-    display: none;
-  }
   .navbar-scroll .nav li a {
     color: #1E1E1E;
   }
@@ -541,6 +499,20 @@ body.dark .navbar-scroll {
   }
   body.dark .navbar-scroll .nav li.active a:hover::before {
     background: #FAFAFA;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .nav-bar .logotipo {
+    padding: 0;
+    z-index: 1001;
+    width: 275px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .nav-bar .logotipo {
+    width: 225px;
   }
 }
 
@@ -624,7 +596,7 @@ body.dark #loader.fullscreen {
 }
 
 .switch.active {
-  background: #FFD166;
+  background: #ffe640;
 }
 
 .switch.active::after {
@@ -644,7 +616,7 @@ body.dark #loader.fullscreen {
 .banner {
   width: 100%;
   height: 100%;
-  background: #FAFAFA url("../img/banner.svg") center center no-repeat;
+  background: #FAFAFA url("../img/background/banner.svg") center center no-repeat;
   background-size: cover;
   -webkit-transition: all 500ms;
   -webkit-transition: all 500ms cubic-bezier(1, 0, 0, 1);
@@ -658,7 +630,7 @@ body.dark #loader.fullscreen {
 }
 
 body.dark .banner {
-  background: #1E1E1E url("../img/bannerdark.svg") center center no-repeat;
+  background: #1E1E1E url("../img/background/bannerdark.svg") center center no-repeat;
   background-size: cover;
   -webkit-transition: all 500ms;
   -webkit-transition: all 500ms cubic-bezier(1, 0, 0, 1);
@@ -679,9 +651,10 @@ body.dark .banner {
 }
 
 .banner .banner-content .text .text-content h1 {
-  font-size: 48px;
+  font-size: 60px;
+  text-align: center;
   font-weight: 600;
-  letter-spacing: 3px;
+  text-transform: uppercase;
   color: #0076BC;
 }
 
@@ -690,7 +663,7 @@ body.dark .banner {
   width: 100%;
   font-size: 32px;
   font-weight: 500;
-  color: #FFD166;
+  color: #ffe640;
 }
 
 .banner .banner-content .text .text-content .typing #changeling {
@@ -870,7 +843,7 @@ body.dark .banner .banner-content .text .text-content .typing #changeling {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: url("../img/front.png") center center no-repeat;
+  background: url("../img/background/front.png") center center no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -942,7 +915,7 @@ body.dark .banner .banner-content .text .text-content .typing #changeling {
 
 @media screen and (max-width: 768px) {
   .sobre-mi {
-    background: url("../img/frontResponsive.png") center center no-repeat;
+    background: url("../img/background/frontResponsive.png") center center no-repeat;
     background-size: cover;
     background-attachment: fixed;
   }
@@ -1698,7 +1671,7 @@ body.dark .formacion .timeline__event__description {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  background: url("../img/backgroundFront.png") center center no-repeat;
+  background: url("../img/background/backgroundFront.png") center center no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -1808,232 +1781,114 @@ body.dark .formacion .timeline__event__description {
 
 #portafolio {
   width: 100%;
+  min-height: 100vh;
   height: 100%;
-  padding: 3rem;
+  padding: 0 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 #portafolio .proyectos {
-  max-width: 980px;
   width: 100%;
+  height: 100%;
 }
 
-#portafolio .proyectos .my_card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  border-radius: 16px;
-  overflow: hidden;
-  margin: 40px auto;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  background-color: #FAFAFA;
-  -webkit-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1), 0 15px 35px 0 rgba(0, 0, 0, 0.05);
-          box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1), 0 15px 35px 0 rgba(0, 0, 0, 0.05);
-  -webkit-transition: all 120ms ease;
-  transition: all 120ms ease;
-}
-
-body.dark #portafolio .proyectos .my_card {
-  background: #1E1E1E;
-}
-
-#portafolio .proyectos .my_card .card_img {
-  width: 60%;
-  height: 450px;
-}
-
-#portafolio .proyectos .my_card .card_img img {
-  width: 100%;
-  height: auto;
-}
-
-@supports ((-o-object-fit: cover) or (object-fit: cover)) {
-  #portafolio .proyectos .my_card .card_img img {
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: center center;
-       object-position: center center;
-  }
-}
-
-#portafolio .proyectos .my_card .card_text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+#portafolio .proyectos .content-card {
   padding: 1rem;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
 }
 
-#portafolio .proyectos .my_card .card_text span {
-  color: rgba(100, 100, 100, 0.507);
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+#portafolio .proyectos .content-card .my-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 16px;
+  -webkit-box-shadow: 10px 10px 20px rgba(0, 10, 8, 0.1);
+          box-shadow: 10px 10px 20px rgba(0, 10, 8, 0.1);
+  overflow: hidden;
 }
 
-body.dark #portafolio .proyectos .my_card .card_text span {
-  color: #E1E1E1;
+#portafolio .proyectos .content-card .my-card img {
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
 }
 
-#portafolio .proyectos .my_card .card_text h2 {
-  padding: 1rem 0;
-  color: #121212;
-  font-weight: 600;
-  font-size: 24px;
-  letter-spacing: 2px;
-  line-height: 1.25;
-  text-align: left;
-}
-
-body.dark #portafolio .proyectos .my_card .card_text h2 {
-  color: #EDF0F5;
-}
-
-#portafolio .proyectos .my_card .card_text p {
-  color: #1E1E1E;
-  text-align: justify;
-  font-weight: 500;
-  line-height: 2;
-}
-
-body.dark #portafolio .proyectos .my_card .card_text p {
-  color: #EDF0F5;
-}
-
-#portafolio .proyectos .my_card .card_text .card_button {
-  display: none;
+#portafolio .proyectos .content-card .my-card .my-card-hover {
+  visibility: none;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #0d48a1a2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 200px;
-  font-size: 16px;
-  font-weight: 600;
-  color: #fff;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#portafolio .proyectos .content-card .my-card .my-card-hover a {
+  pointer-events: none;
+  cursor: default;
+}
+
+#portafolio .proyectos .content-card .my-card .my-card-hover a span {
+  padding: 2rem;
+  color: #E1E1E1;
+  font-size: 24px;
+  font-weight: 100px;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+#portafolio .proyectos .content-card .my-card:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+}
+
+#portafolio .proyectos .content-card .my-card:hover .my-card-hover {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+}
+
+#portafolio .proyectos .content-card .my-card:hover .my-card-hover a {
+  pointer-events: all;
   cursor: pointer;
-  height: 50px;
-  text-align: center;
-  border: none;
-  background-size: 300% 100%;
-  border-radius: 50px;
-  background-image: -webkit-gradient(linear, left top, right top, from(#21cc5c), color-stop(#1eb452), color-stop(#21cc5c), to(#1eb452));
-  background-image: linear-gradient(to right, #21cc5c, #1eb452, #21cc5c, #1eb452);
-  moz-transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
 }
 
-#portafolio .proyectos .my_card .card_text .card_button:hover {
-  background-position: 100% 0;
-  moz-transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+#portafolio .proyectos .content-card .my-card:hover .my-card-hover a span {
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
-@media screen and (max-width: 831px) {
+@media screen and (max-width: 720px) {
   #portafolio {
-    width: 100%;
-    height: 100%;
     padding: 1rem;
-  }
-  #portafolio .proyectos .my_card {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
-    margin: 40px auto;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-    border-radius: 16px;
-    background-color: #fff;
-    -webkit-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1), 0 15px 35px 0 rgba(0, 0, 0, 0.05);
-            box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1), 0 15px 35px 0 rgba(0, 0, 0, 0.05);
-    -webkit-transition: all 120ms ease;
-    transition: all 120ms ease;
-  }
-  #portafolio .proyectos .my_card .card_img {
-    width: 100%;
-    height: 320px;
-    border-top-right-radius: 8px;
-    border-bottom-left-radius: 0px;
-  }
-  #portafolio .proyectos .my_card .card_img.hare28 {
-    background-image: url("../img/portafolio/hare28.jpg");
-  }
-  #portafolio .proyectos .my_card .card_text {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-  }
-  #portafolio .proyectos .my_card .card_text span {
-    color: rgba(51, 51, 51, 0.4);
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-  }
-  #portafolio .proyectos .my_card .card_text h2 {
-    color: #121212;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    line-height: 36px;
-    font-weight: bold;
-    letter-spacing: 3px;
-  }
-  #portafolio .proyectos .my_card .card_text p {
-    color: #1E1E1E;
-    text-align: justify;
-    line-height: 2;
-    font-weight: 500;
-  }
-}
-
-@media screen and (max-width: 479px) {
-  #portafolio {
-    width: 100%;
-    height: 100%;
-    padding: 1rem;
-  }
-  #portafolio .proyectos .my_card {
-    margin: 2rem 0;
-  }
-  #portafolio .proyectos .my_card .card_img {
-    height: 180px;
-  }
-  #portafolio .proyectos .my_card .card_text h2 {
-    padding: 0;
-    font-size: 20px;
-    line-height: 1;
   }
 }
 
@@ -2052,6 +1907,12 @@ body.dark #portafolio .proyectos .my_card .card_text p {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 3rem;
+}
+
+#contacto .footer img {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
 }
 
 #contacto .footer h2 {
