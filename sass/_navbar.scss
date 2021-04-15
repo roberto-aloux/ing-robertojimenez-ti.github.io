@@ -1,6 +1,6 @@
 .nav-bar {
     width: 100%;
-    height: 80px;
+    height: 75px;
     //
     position: fixed;
     top: 0;
@@ -48,7 +48,7 @@
                 position: absolute;
                 height: 9px;
                 width: 60px;
-                background: $azulClaro;
+                background: $blanco;
                 body.dark & {
                     background: $blanco;
                 }
@@ -154,7 +154,7 @@
                 font-size: 18px;
                 font-weight: 500;
                 letter-spacing: 3px;
-                color: $negroclaro;
+                color: $backgroundWhite;
                 //
                 -webkit-transition: 0.5s all ease-out;
                 -moz-transition: 0.5s all ease-out;
@@ -222,8 +222,7 @@
 
 .navbar-scroll {
     height: 60px;
-    background: $backgroundWhite;
-    box-shadow: $sombraDark;
+    background: $backgroundBlue;
     -webkit-transition: 400ms ease all;
     -moz-transition: 400ms ease all;
     -ms-transition: 400ms ease all;
@@ -231,7 +230,6 @@
     transition: 400ms ease all;
     body.dark & {
         background: $backgroundDark;
-        box-shadow: $sombraDark;
         -webkit-transition: 400ms ease all;
         -moz-transition: 400ms ease all;
         -ms-transition: 400ms ease all;
@@ -316,7 +314,7 @@
                     font-size: 18px;
                     font-weight: 500;
                     letter-spacing: 3px;
-                    color: $negroclaro;
+                    color: $backgroundWhite;
                     //
                     -webkit-transition: 0.5s all ease-out;
                     -moz-transition: 0.5s all ease-out;
@@ -373,7 +371,7 @@
                             z-index: -1;
                         }
                         &:hover {
-                            color: $negroclaro;
+                            color: $backgroundWhite;
                             -webkit-transition: all 0.3s ease-in-out 0s;
                             -o-transition: all 0.3s ease-in-out 0s;
                             transition: all 0.3s ease-in-out 0s;
@@ -406,7 +404,7 @@
         .nav {
             li {
                 a {
-                    color: $negroclaro;
+                    color: $backgroundWhite;
                     body.dark & {
                         color: $blanco;
                     }
@@ -422,7 +420,7 @@
                 &.active {
                     a {
                         &:hover {
-                            color: $negroclaro;
+                            color: $backgroundWhite;
                             body.dark & {
                                 color: $blanco;
                             }
