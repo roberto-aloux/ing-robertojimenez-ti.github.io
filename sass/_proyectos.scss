@@ -3,13 +3,11 @@
   height: 100%;
   min-height: 100vh;
   background: $backgroundWhite url("../img/background/background.svg") center center no-repeat;
-  background-attachment: fixed;
   background-size: cover;
   color: $blanco;
   padding-top: 80px;
   body.dark & {
     background: $backgroundDark url("../img/background/background_dark.svg") center center no-repeat;
-    background-attachment: fixed;
     background-size: cover;
   }
   .macbook {

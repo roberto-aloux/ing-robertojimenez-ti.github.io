@@ -1905,7 +1905,6 @@ body.dark #proyectos .proyectos h2 {
   height: 100%;
   min-height: 100vh;
   background: #FAFAFA url("../img/background/background.svg") center center no-repeat;
-  background-attachment: fixed;
   background-size: cover;
   color: #FAFAFA;
   padding-top: 80px;
@@ -1913,7 +1912,6 @@ body.dark #proyectos .proyectos h2 {
 
 body.dark .proyect-content {
   background: #1E1E1E url("../img/background/background_dark.svg") center center no-repeat;
-  background-attachment: fixed;
   background-size: cover;
 }
 
