@@ -169,6 +169,17 @@
       background: #373b39;
     }
   }
+  .paleta.tgs {
+    .color-1 {
+      background: #D00510;
+    }
+    .color-2 {
+      background: #6c1716;
+    }
+    .color-3 {
+      background: #373737;
+    }
+  }
   .paleta.iaasa {
     .color-1 {
       background: #6bac2c;
@@ -222,40 +233,6 @@
         .color {
          transform: scale(0.90);
         }
-      }
-    }
-    .paleta.h28 {
-      .color-1 {
-        background: #6c1716;
-      }
-      .color-2 {
-        background: #8e171c;
-      }
-      .color-3 {
-        background: #373b39;
-      }
-    }
-    .paleta.iaasa {
-      .color-1 {
-        background: #6bac2c;
-      }
-      .color-2 {
-        background: #015101;
-      }
-      .color-3 {
-        background: #fff;
-        color: #373b39;
-      }
-    }
-    .paleta.gbs {
-      .color-1 {
-        background: #4a6a9b;
-      }
-      .color-2 {
-        background: #637aa6;
-      }
-      .color-3 {
-        background: #22cc5d;
       }
     }
    }

@@ -914,7 +914,7 @@ body.dark .banner .banner-content .text .text-content .typing #changeling {
   .sobre-mi {
     background: url("../img/background/frontResponsive.png") center center no-repeat;
     background-size: cover;
-    background-attachment: initial;
+    background-attachment: fixed;
   }
   .sobre-mi .content {
     padding: 1rem;
@@ -1895,7 +1895,7 @@ body.dark #proyectos .proyectos h2 {
 }
 
 @media screen and (max-width: 720px) {
-  #portafolio {
+  #proyectos {
     padding: 1rem;
   }
 }
@@ -2089,6 +2089,18 @@ body.dark .proyect-content {
   background: #373b39;
 }
 
+.proyect-content .info-proyect .paleta.tgs .color-1 {
+  background: #D00510;
+}
+
+.proyect-content .info-proyect .paleta.tgs .color-2 {
+  background: #6c1716;
+}
+
+.proyect-content .info-proyect .paleta.tgs .color-3 {
+  background: #373737;
+}
+
 .proyect-content .info-proyect .paleta.iaasa .color-1 {
   background: #6bac2c;
 }
@@ -2147,34 +2159,6 @@ body.dark .proyect-content {
   .proyect-content .info-proyect .paleta li .color {
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
-  }
-  .proyect-content .info-proyect .paleta.h28 .color-1 {
-    background: #6c1716;
-  }
-  .proyect-content .info-proyect .paleta.h28 .color-2 {
-    background: #8e171c;
-  }
-  .proyect-content .info-proyect .paleta.h28 .color-3 {
-    background: #373b39;
-  }
-  .proyect-content .info-proyect .paleta.iaasa .color-1 {
-    background: #6bac2c;
-  }
-  .proyect-content .info-proyect .paleta.iaasa .color-2 {
-    background: #015101;
-  }
-  .proyect-content .info-proyect .paleta.iaasa .color-3 {
-    background: #fff;
-    color: #373b39;
-  }
-  .proyect-content .info-proyect .paleta.gbs .color-1 {
-    background: #4a6a9b;
-  }
-  .proyect-content .info-proyect .paleta.gbs .color-2 {
-    background: #637aa6;
-  }
-  .proyect-content .info-proyect .paleta.gbs .color-3 {
-    background: #22cc5d;
   }
 }
 
