@@ -195,7 +195,7 @@ body.dark .nav-bar .btn-menu .nav-icon span {
   transform: rotate(45deg);
   top: -3px;
   left: 8px;
-  background: #0076BC;
+  background: #FAFAFA;
 }
 
 body.dark .nav-bar .btn-menu-close .nav-icon span:nth-child(1) {
@@ -205,7 +205,7 @@ body.dark .nav-bar .btn-menu-close .nav-icon span:nth-child(1) {
 .nav-bar .btn-menu-close .nav-icon span:nth-child(2) {
   width: 0%;
   opacity: 0;
-  background: #0076BC;
+  background: #FAFAFA;
 }
 
 body.dark .nav-bar .btn-menu-close .nav-icon span:nth-child(2) {
@@ -217,7 +217,7 @@ body.dark .nav-bar .btn-menu-close .nav-icon span:nth-child(2) {
   transform: rotate(-45deg);
   top: 39px;
   left: 8px;
-  background: #0076BC;
+  background: #FAFAFA;
 }
 
 body.dark .nav-bar .btn-menu-close .nav-icon span:nth-child(3) {
@@ -375,12 +375,12 @@ body.dark .navbar-scroll {
     -webkit-box-pack: initial;
         -ms-flex-pack: initial;
             justify-content: initial;
-    background: #FAFAFA;
+    background: #0d47a1;
     -webkit-box-shadow: 10px 10px 20px rgba(0, 10, 8, 0.1);
             box-shadow: 10px 10px 20px rgba(0, 10, 8, 0.1);
     width: 60%;
     height: 92%;
-    border-radius: 8px;
+    border-radius: 0 8px 8px 8px;
     left: 0;
     top: 60px;
     -webkit-transition: all 500ms;
@@ -417,7 +417,7 @@ body.dark .navbar-scroll {
     height: 3px;
     bottom: 0px;
     left: 0;
-    background: #FAFAFA;
+    background: #0076BC;
     visibility: hidden;
     -webkit-transform: scaleX(0);
             transform: scaleX(0);
@@ -426,11 +426,11 @@ body.dark .navbar-scroll {
     z-index: -1;
   }
   body.dark .nav-bar .nav li a::before {
-    color: #FAFAFA;
+    color: #0076BC;
   }
   .nav-bar .nav li a:hover::before {
     visibility: visible;
-    background: #FAFAFA;
+    background: #0076BC;
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
   }
@@ -914,7 +914,7 @@ body.dark .banner .banner-content .text .text-content .typing #changeling {
   .sobre-mi {
     background: url("../img/background/frontResponsive.png") center center no-repeat;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: initial;
   }
   .sobre-mi .content {
     padding: 1rem;
