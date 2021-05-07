@@ -1921,7 +1921,7 @@ body.dark .proyect-content {
 }
 
 .proyect-content .macbook .screen {
-  background: #000;
+  background: #1f1f1f;
   border-radius: 3% 3% 0.5% 0.5% / 5%;
   margin: 0 auto;
   /* for aspect ratio */
@@ -1930,8 +1930,9 @@ body.dark .proyect-content {
 }
 
 .proyect-content .macbook .screen::before {
-  border: 2px solid #000;
-  border-radius: 3% 3% 0.5% 0.5% / 5%;
+  border: 2px solid #1b1b1b;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
   content: "";
   display: block;
   /* for aspect ratio ~67:100 */
@@ -1944,8 +1945,9 @@ body.dark .proyect-content {
   left: 0;
   right: 0;
   top: 0;
-  margin: 4.3% 3.2%;
-  background: #333;
+  margin: 4% 3%;
+  background: transparent;
+  overflow: hidden;
 }
 
 .proyect-content .macbook .screen .viewport .owl-theme {
@@ -1955,13 +1957,14 @@ body.dark .proyect-content {
   margin: 0;
 }
 
-.proyect-content .macbook .screen .viewport .owl-theme .owl-item {
+.proyect-content .macbook .screen .viewport .owl-theme .item {
   width: 100%;
+  height: 100%;
   padding: 0;
   margin: 0;
 }
 
-.proyect-content .macbook .screen .viewport .owl-theme .owl-item img {
+.proyect-content .macbook .screen .viewport .owl-theme .item img {
   width: 100%;
   height: 100%;
 }
@@ -2060,10 +2063,10 @@ body.dark .proyect-content {
 }
 
 .proyect-content .info-proyect .paleta li .color {
-  width: 70px;
-  height: 70px;
+  width: 75px;
+  height: 75px;
   border-radius: 100%;
-  padding: .5rem;
+  padding: .75rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2075,6 +2078,19 @@ body.dark .proyect-content {
           justify-content: center;
   font-size: 15px;
   font-weight: 500;
+}
+
+.proyect-content .info-proyect .paleta.iaasa .color-1 {
+  background: #6bac2c;
+}
+
+.proyect-content .info-proyect .paleta.iaasa .color-2 {
+  background: #015101;
+}
+
+.proyect-content .info-proyect .paleta.iaasa .color-3 {
+  background: #fff;
+  color: #1b1b1b;
 }
 
 .proyect-content .info-proyect .paleta.h28 .color-1 {
@@ -2089,6 +2105,18 @@ body.dark .proyect-content {
   background: #373b39;
 }
 
+.proyect-content .info-proyect .paleta.gbs .color-1 {
+  background: #4a6a9b;
+}
+
+.proyect-content .info-proyect .paleta.gbs .color-2 {
+  background: #637aa6;
+}
+
+.proyect-content .info-proyect .paleta.gbs .color-3 {
+  background: #22cc5d;
+}
+
 .proyect-content .info-proyect .paleta.tgs .color-1 {
   background: #D00510;
 }
@@ -2101,29 +2129,41 @@ body.dark .proyect-content {
   background: #373737;
 }
 
-.proyect-content .info-proyect .paleta.iaasa .color-1 {
-  background: #6bac2c;
+.proyect-content .info-proyect .paleta.sfd .color-1 {
+  background: #229E6C;
 }
 
-.proyect-content .info-proyect .paleta.iaasa .color-2 {
-  background: #015101;
+.proyect-content .info-proyect .paleta.sfd .color-2 {
+  background: #E2C41B;
 }
 
-.proyect-content .info-proyect .paleta.iaasa .color-3 {
-  background: #fff;
-  color: #373b39;
+.proyect-content .info-proyect .paleta.sfd .color-3 {
+  background: #004B97;
 }
 
-.proyect-content .info-proyect .paleta.gbs .color-1 {
-  background: #4a6a9b;
+.proyect-content .info-proyect .paleta.cideam .color-1 {
+  background: #00B395;
 }
 
-.proyect-content .info-proyect .paleta.gbs .color-2 {
-  background: #637aa6;
+.proyect-content .info-proyect .paleta.cideam .color-2 {
+  background: #F87000;
 }
 
-.proyect-content .info-proyect .paleta.gbs .color-3 {
-  background: #22cc5d;
+.proyect-content .info-proyect .paleta.cideam .color-3 {
+  background: #121212;
+}
+
+.proyect-content .info-proyect .paleta.ciencias .color-1 {
+  background: #023745;
+}
+
+.proyect-content .info-proyect .paleta.ciencias .color-2 {
+  background: #d7bb72;
+}
+
+.proyect-content .info-proyect .paleta.ciencias .color-3 {
+  background: #ffffff;
+  color: #1b1b1b;
 }
 
 @media screen and (max-width: 640px) {

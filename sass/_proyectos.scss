@@ -14,15 +14,16 @@
     margin: 0 auto;
     max-width: 800px;
     .screen {
-      background: #000;
+      background: #1f1f1f;
       border-radius: 3% 3% 0.5% 0.5% / 5%;
       margin: 0 auto;
       /* for aspect ratio */
       position: relative;
       width: 80%;
       &::before {
-        border: 2px solid #000;
-        border-radius: 3% 3% 0.5% 0.5% / 5%;
+        border: 2px solid #1b1b1b;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
         content: "";
         display: block;
         /* for aspect ratio ~67:100 */
@@ -34,24 +35,26 @@
         left: 0;
         right: 0;
         top: 0;
-        margin: 4.3% 3.2%;
-        background: #333;
+        margin: 4% 3%;
+        background: transparent;
+        overflow: hidden;
         .owl-theme {
             width: 100%;
             height: 100%;
             padding: 0;
-            margin: 0;
-            .owl-item{
+              margin: 0;
+            .item{
               width: 100%;
+              height: 100%;
               padding: 0;
               margin: 0;
               img{
-                width: 100%;
-                height: 100%;
+               width: 100%;
+               height: 100%;
               }
             }
             .owl-dots {
-            width: 100%;
+              width: 100%;
               position: absolute;
               bottom: 0;
               left: 50%;
@@ -146,16 +149,28 @@
     li {
       padding: 0 1rem;
       .color {
-        width: 70px;
-        height: 70px;
+        width: 75px;
+        height: 75px;
         border-radius: 100%;
-        padding: .5rem;
+        padding: .75rem;
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 15px;
         font-weight: 500;
       }
+    }
+  }
+  .paleta.iaasa {
+    .color-1 {
+      background: #6bac2c;
+    }
+    .color-2 {
+      background: #015101;
+    }
+    .color-3 {
+      background: #fff;
+      color: #1b1b1b;
     }
   }
   .paleta.h28 {
@@ -169,29 +184,6 @@
       background: #373b39;
     }
   }
-  .paleta.tgs {
-    .color-1 {
-      background: #D00510;
-    }
-    .color-2 {
-      background: #6c1716;
-    }
-    .color-3 {
-      background: #373737;
-    }
-  }
-  .paleta.iaasa {
-    .color-1 {
-      background: #6bac2c;
-    }
-    .color-2 {
-      background: #015101;
-    }
-    .color-3 {
-      background: #fff;
-      color: #373b39;
-    }
-  }
   .paleta.gbs {
     .color-1 {
       background: #4a6a9b;
@@ -203,6 +195,52 @@
       background: #22cc5d;
     }
   }
+  .paleta.tgs {
+    .color-1 {
+      background: #D00510;
+    }
+    .color-2 {
+      background: #6c1716;
+    }
+    .color-3 {
+      background: #373737;
+    }
+  }
+  .paleta.sfd {
+    .color-1 {
+      background: #229E6C;
+    }
+    .color-2 {
+      background: #E2C41B;
+    }
+    .color-3 {
+      background: #004B97;
+    }
+  }
+  .paleta.cideam {
+    .color-1 {
+      background: #00B395;
+    }
+    .color-2 {
+      background: #F87000;
+    }
+    .color-3 {
+      background: #121212;
+    }
+  }
+  .paleta.ciencias {
+    .color-1 {
+      background: #023745;
+    }
+    .color-2 {
+      background: #d7bb72;
+    }
+    .color-3 {
+      background: #ffffff;
+      color: #1b1b1b;
+    }
+  }
+  
  }
 }
 
